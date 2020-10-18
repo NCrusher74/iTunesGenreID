@@ -21,8 +21,5 @@ let package = Package(
         .target(
             name: "iTunesGenreID",
             dependencies: []),
-        .testTarget(
-            name: "iTunesGenreIDTests",
-            dependencies: ["iTunesGenreID"]),
     ]
 )
