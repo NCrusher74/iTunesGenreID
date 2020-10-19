@@ -62,12 +62,9 @@ enum AppStore: CaseIterable {
             .developerTools,
             .graphicsAndDesign
         ]
-        let games = Games.allCases.map({AppStore.games($0)})
-        array.append(contentsOf: games)
-        let magazines = MagazinesAndNewspapers.allCases.map({AppStore.magazinesAndNewspapers($0)})
-        array.append(contentsOf: magazines)
-        let stickers = Stickers.allCases.map({AppStore.stickers($0)})
-        array.append(contentsOf: stickers)
+        array.append(contentsOf: Games.allCases.map({AppStore.games($0)}))
+        array.append(contentsOf: MagazinesAndNewspapers.allCases.map({AppStore.magazinesAndNewspapers($0)}))
+        array.append(contentsOf: Stickers.allCases.map({AppStore.stickers($0)}))
         return array
     }
     
@@ -289,7 +286,6 @@ enum AppStore: CaseIterable {
         }
     }
 }
-
 
 enum MacAppStore: CaseIterable {
     static var allCases: [MacAppStore] {

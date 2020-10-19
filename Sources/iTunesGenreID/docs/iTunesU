@@ -1,176 +1,384 @@
+case iTunesU = 40000000
+case .iTunesU: return "iTunes U"
 
-40000000	= iTunes U
-40000001	= iTunes U|Business & Economics
-40000002	= iTunes U|Business & Economics|Economics
-40000003	= iTunes U|Business & Economics|Finance
-40000004	= iTunes U|Business & Economics|Hospitality
-40000005	= iTunes U|Business & Economics|Management
-40000006	= iTunes U|Business & Economics|Marketing
-40000007	= iTunes U|Business & Economics|Personal Finance
-40000008	= iTunes U|Business & Economics|Real Estate
-40000009	= iTunes U|Engineering
-40000010	= iTunes U|Engineering|Chemical & Petroleum Engineering
-40000011	= iTunes U|Engineering|Civil Engineering
-40000012	= iTunes U|Engineering|Computer Science
-40000013	= iTunes U|Engineering|Electrical Engineering
-40000014	= iTunes U|Engineering|Environmental Engineering
-40000015	= iTunes U|Engineering|Mechanical Engineering
-40000016	= iTunes U|Music, Art, & Design
-40000017	= iTunes U|Music, Art, & Design|Architecture
-40000019	= iTunes U|Music, Art, & Design|Art History
-40000020	= iTunes U|Music, Art, & Design|Dance
-40000021	= iTunes U|Music, Art, & Design|Film
-40000022	= iTunes U|Music, Art, & Design|Design
-40000023	= iTunes U|Music, Art, & Design|Interior Design
-40000024	= iTunes U|Music, Art, & Design|Music
-40000025	= iTunes U|Music, Art, & Design|Theater
-40000026	= iTunes U|Health & Medicine
-40000027	= iTunes U|Health & Medicine|Anatomy & Physiology
-40000028	= iTunes U|Health & Medicine|Behavioral Science
-40000029	= iTunes U|Health & Medicine|Dentistry
-40000030	= iTunes U|Health & Medicine|Diet & Nutrition
-40000031	= iTunes U|Health & Medicine|Emergency Medicine
-40000032	= iTunes U|Health & Medicine|Genetics
-40000033	= iTunes U|Health & Medicine|Gerontology
-40000034	= iTunes U|Health & Medicine|Health & Exercise Science
-40000035	= iTunes U|Health & Medicine|Immunology
-40000036	= iTunes U|Health & Medicine|Neuroscience
-40000037	= iTunes U|Health & Medicine|Pharmacology & Toxicology
-40000038	= iTunes U|Health & Medicine|Psychiatry
-40000039	= iTunes U|Health & Medicine|Global Health
-40000040	= iTunes U|Health & Medicine|Radiology
-40000041	= iTunes U|History
-40000042	= iTunes U|History|Ancient History
-40000043	= iTunes U|History|Medieval History
-40000044	= iTunes U|History|Military History
-40000045	= iTunes U|History|Modern History
-40000046	= iTunes U|History|African History
-40000047	= iTunes U|History|Asia-Pacific History
-40000048	= iTunes U|History|European History
-40000049	= iTunes U|History|Middle Eastern History
-40000050	= iTunes U|History|North American History
-40000051	= iTunes U|History|South American History
-40000053	= iTunes U|Communications & Journalism
-40000054	= iTunes U|Philosophy
-40000055	= iTunes U|Religion & Spirituality
-40000056	= iTunes U|Languages
-40000057	= iTunes U|Languages|African Languages
-40000058	= iTunes U|Languages|Ancient Languages
-40000061	= iTunes U|Languages|English
-40000063	= iTunes U|Languages|French
-40000064	= iTunes U|Languages|German
-40000065	= iTunes U|Languages|Italian
-40000066	= iTunes U|Languages|Linguistics
-40000068	= iTunes U|Languages|Spanish
-40000069	= iTunes U|Languages|Speech Pathology
-40000070	= iTunes U|Writing & Literature
-40000071	= iTunes U|Writing & Literature|Anthologies
-40000072	= iTunes U|Writing & Literature|Biography
-40000073	= iTunes U|Writing & Literature|Classics
-40000074	= iTunes U|Writing & Literature|Literary Criticism
-40000075	= iTunes U|Writing & Literature|Fiction
-40000076	= iTunes U|Writing & Literature|Poetry
-40000077	= iTunes U|Mathematics
-40000078	= iTunes U|Mathematics|Advanced Mathematics
-40000079	= iTunes U|Mathematics|Algebra
-40000080	= iTunes U|Mathematics|Arithmetic
-40000081	= iTunes U|Mathematics|Calculus
-40000082	= iTunes U|Mathematics|Geometry
-40000083	= iTunes U|Mathematics|Statistics
-40000084	= iTunes U|Science
-40000085	= iTunes U|Science|Agricultural
-40000086	= iTunes U|Science|Astronomy
-40000087	= iTunes U|Science|Atmosphere
-40000088	= iTunes U|Science|Biology
-40000089	= iTunes U|Science|Chemistry
-40000090	= iTunes U|Science|Ecology
-40000091	= iTunes U|Science|Geography
-40000092	= iTunes U|Science|Geology
-40000093	= iTunes U|Science|Physics
-40000094	= iTunes U|Social Science
-40000095	= iTunes U|Law & Politics|Law
-40000096	= iTunes U|Law & Politics|Political Science
-40000097	= iTunes U|Law & Politics|Public Administration
-40000098	= iTunes U|Social Science|Psychology
-40000099	= iTunes U|Social Science|Social Welfare
-40000100	= iTunes U|Social Science|Sociology
-40000101	= iTunes U|Society
-40000103	= iTunes U|Society|Asia Pacific Studies
-40000104	= iTunes U|Society|European Studies
-40000105	= iTunes U|Society|Indigenous Studies
-40000106	= iTunes U|Society|Latin & Caribbean Studies
-40000107	= iTunes U|Society|Middle Eastern Studies
-40000108	= iTunes U|Society|Women's Studies
-40000109	= iTunes U|Teaching & Learning
-40000110	= iTunes U|Teaching & Learning|Curriculum & Teaching
-40000111	= iTunes U|Teaching & Learning|Educational Leadership
-40000112	= iTunes U|Teaching & Learning|Family & Childcare
-40000113	= iTunes U|Teaching & Learning|Learning Resources
-40000114	= iTunes U|Teaching & Learning|Psychology & Research
-40000115	= iTunes U|Teaching & Learning|Special Education
-40000116	= iTunes U|Music, Art, & Design|Culinary Arts
-40000117	= iTunes U|Music, Art, & Design|Fashion
-40000118	= iTunes U|Music, Art, & Design|Media Arts
-40000119	= iTunes U|Music, Art, & Design|Photography
-40000120	= iTunes U|Music, Art, & Design|Visual Art
-40000121	= iTunes U|Business & Economics|Entrepreneurship
-40000122	= iTunes U|Communications & Journalism|Broadcasting
-40000123	= iTunes U|Communications & Journalism|Digital Media
-40000124	= iTunes U|Communications & Journalism|Journalism
-40000125	= iTunes U|Communications & Journalism|Photojournalism
-40000126	= iTunes U|Communications & Journalism|Print
-40000127	= iTunes U|Communications & Journalism|Speech
-40000128	= iTunes U|Communications & Journalism|Writing
-40000129	= iTunes U|Health & Medicine|Nursing
-40000130	= iTunes U|Languages|Arabic
-40000131	= iTunes U|Languages|Chinese
-40000132	= iTunes U|Languages|Hebrew
-40000133	= iTunes U|Languages|Hindi
-40000134	= iTunes U|Languages|Indigenous Languages
-40000135	= iTunes U|Languages|Japanese
-40000136	= iTunes U|Languages|Korean
-40000137	= iTunes U|Languages|Other Languages
-40000138	= iTunes U|Languages|Portuguese
-40000139	= iTunes U|Languages|Russian
-40000140	= iTunes U|Law & Politics
-40000141	= iTunes U|Law & Politics|Foreign Policy & International Relations
-40000142	= iTunes U|Law & Politics|Local Governments
-40000143	= iTunes U|Law & Politics|National Governments
-40000144	= iTunes U|Law & Politics|World Affairs
-40000145	= iTunes U|Writing & Literature|Comparative Literature
-40000146	= iTunes U|Philosophy|Aesthetics
-40000147	= iTunes U|Philosophy|Epistemology
-40000148	= iTunes U|Philosophy|Ethics
-40000149	= iTunes U|Philosophy|Metaphysics
-40000150	= iTunes U|Philosophy|Political Philosophy
-40000151	= iTunes U|Philosophy|Logic
-40000152	= iTunes U|Philosophy|Philosophy of Language
-40000153	= iTunes U|Philosophy|Philosophy of Religion
-40000154	= iTunes U|Social Science|Archaeology
-40000155	= iTunes U|Social Science|Anthropology
-40000156	= iTunes U|Religion & Spirituality|Buddhism
-40000157	= iTunes U|Religion & Spirituality|Christianity
-40000158	= iTunes U|Religion & Spirituality|Comparative Religion
-40000159	= iTunes U|Religion & Spirituality|Hinduism
-40000160	= iTunes U|Religion & Spirituality|Islam
-40000161	= iTunes U|Religion & Spirituality|Judaism
-40000162	= iTunes U|Religion & Spirituality|Other Religions
-40000163	= iTunes U|Religion & Spirituality|Spirituality
-40000164	= iTunes U|Science|Environment
-40000165	= iTunes U|Society|African Studies
-40000166	= iTunes U|Society|American Studies
-40000167	= iTunes U|Society|Cross-cultural Studies
-40000168	= iTunes U|Society|Immigration & Emigration
-40000169	= iTunes U|Society|Race & Ethnicity Studies
-40000170	= iTunes U|Society|Sexuality Studies
-40000171	= iTunes U|Teaching & Learning|Educational Technology
-40000172	= iTunes U|Teaching & Learning|Information/Library Science
-40000173	= iTunes U|Languages|Dutch
-40000174	= iTunes U|Languages|Luxembourgish
-40000175	= iTunes U|Languages|Swedish
-40000176	= iTunes U|Languages|Norwegian
-40000177	= iTunes U|Languages|Finnish
-40000178	= iTunes U|Languages|Danish
-40000179	= iTunes U|Languages|Polish
-40000180	= iTunes U|Languages|Turkish
-40000181	= iTunes U|Languages|Flemish
+case businessAndEconomics = 40000001
+case economics = 40000002
+case finance = 40000003
+case hospitality = 40000004
+case management = 40000005
+case marketing = 40000006
+case personalFinance = 40000007
+case realEstate = 40000008
+case entrepreneurship = 40000121
+
+case .businessAndEconomics: return "Business & Economics"
+case .economics: return "Economics"
+case .finance: return "Finance"
+case .hospitality: return "Hospitality"
+case .management: return "Management"
+case .marketing: return "Marketing"
+case .personalFinance: return "Personal Finance"
+case .realEstate: return "Real Estate"
+case .entrepreneurship: return "Entrepreneurship"
+
+case engineering = 40000009
+case chemicalAndPetroleumEngineering = 40000010
+case civilEngineering = 40000011
+case computerScience = 40000012
+case electricalEngineering = 40000013
+case environmentalEngineering = 40000014
+case mechanicalEngineering = 40000015
+
+case .engineering: return "Engineering"
+case .chemicalAndPetroleumEngineering: return "Chemical & Petroleum Engineering"
+case .civilEngineering: return "Civil Engineering"
+case .computerScience: return "Computer Science"
+case .electricalEngineering: return "Electrical Engineering"
+case .environmentalEngineering: return "Environmental Engineering"
+case .mechanicalEngineering: return "Mechanical Engineering"
+
+case music,Art,AndDesign = 40000016
+case architecture = 40000017
+case artHistory = 40000019
+case dance = 40000020
+case film = 40000021
+case design = 40000022
+case interiorDesign = 40000023
+case music = 40000024
+case theater = 40000025
+case culinaryArts = 40000116
+case fashion = 40000117
+case mediaArts = 40000118
+case photography = 40000119
+case visualArt = 40000120
+
+case .music,Art,AndDesign: return "Music, Art, & Design"
+case .architecture: return "Architecture"
+case .artHistory: return "Art History"
+case .dance: return "Dance"
+case .film: return "Film"
+case .design: return "Design"
+case .interiorDesign: return "Interior Design"
+case .music: return "Music"
+case .theater: return "Theater"
+case .culinaryArts: return "Culinary Arts"
+case .fashion: return "Fashion"
+case .mediaArts: return "Media Arts"
+case .photography: return "Photography"
+case .visualArt: return "Visual Art"
+
+case healthAndMedicine = 40000026
+case anatomyAndPhysiology = 40000027
+case behavioralScience = 40000028
+case dentistry = 40000029
+case dietAndNutrition = 40000030
+case emergencyMedicine = 40000031
+case genetics = 40000032
+case gerontology = 40000033
+case healthAndExerciseScience = 40000034
+case immunology = 40000035
+case neuroscience = 40000036
+case pharmacologyAndToxicology = 40000037
+case psychiatry = 40000038
+case globalHealth = 40000039
+case radiology = 40000040
+case nursing = 40000129
+
+case .healthAndMedicine: return "Health & Medicine"
+case .anatomyAndPhysiology: return "Anatomy & Physiology"
+case .behavioralScience: return "Behavioral Science"
+case .dentistry: return "Dentistry"
+case .dietAndNutrition: return "Diet & Nutrition"
+case .emergencyMedicine: return "Emergency Medicine"
+case .genetics: return "Genetics"
+case .gerontology: return "Gerontology"
+case .healthAndExerciseScience: return "Health & Exercise Science"
+case .immunology: return "Immunology"
+case .neuroscience: return "Neuroscience"
+case .pharmacologyAndToxicology: return "Pharmacology & Toxicology"
+case .psychiatry: return "Psychiatry"
+case .globalHealth: return "Global Health"
+case. radiology: return "Radiology"
+case .nursing: return "Nursing"
+
+case history = 40000041
+case ancientHistory = 40000042
+case medievalHistory = 40000043
+case militaryHistory = 40000044
+case modernHistory = 40000045
+case africanHistory = 40000046
+case asiaPacificHistory = 40000047
+case europeanHistory = 40000048
+case middleEasternHistory = 40000049
+case northAmericanHistory = 40000050
+case southAmericanHistory = 40000051
+
+case .history: return "History"
+case .ancientHistory: return "Ancient History"
+case .medievalHistory: return "Medieval History"
+case .militaryHistory: return "Military History"
+case .modernHistory: return "Modern History"
+case .africanHistory: return "African History"
+case .asiaPacificHistory: return "Asia-Pacific History"
+case .europeanHistory: return "European History"
+case .middleEasternHistory: return "Middle Eastern History"
+case .northAmericanHistory: return "North American History"
+case .southAmericanHistory: return "South American History"
+
+case communicationsAndJournalism = 40000053
+case broadcasting = 40000122
+case digitalMedia = 40000123
+case journalism = 40000124
+case photojournalism = 40000125
+case print = 40000126
+case speech = 40000127
+case writing = 40000128
+
+case .communicationsAndJournalism: return "Communications & Journalism"
+case .broadcasting: return "Broadcasting"
+case .digitalMedia: return "Digital Media"
+case .journalism: return "Journalism"
+case .photojournalism: return "Photojournalism"
+case .print: return "Print"
+case .speech: return "Speech"
+case .writing: return "Writing"
+
+case philosophy = 40000054
+case aesthetics = 40000146
+case epistemology = 40000147
+case ethics = 40000148
+case metaphysics = 40000149
+case politicalPhilosophy = 40000150
+case logic = 40000151
+case philosophyOfLanguage = 40000152
+case philosophyOfReligion = 40000153
+
+case .philosophy: return "Philosophy"
+case .aesthetics: return "Aesthetics"
+case .epistemology: return "Epistemology"
+case .ethics: return "Ethics"
+case .metaphysics: return "Metaphysics"
+case .politicalPhilosophy: return "Political Philosophy"
+case .logic: return "Logic"
+case .philosophyOfLanguage: return "Philosophy of Language"
+case .philosophyOfReligion: return "Philosophy of Religion"
+
+case religionAndSpirituality = 40000055
+case buddhism = 40000156
+case christianity = 40000157
+case comparativeReligion = 40000158
+case hinduism = 40000159
+case islam = 40000160
+case judaism = 40000161
+case otherReligions = 40000162
+case spirituality = 40000163
+
+case .peligionAndSpirituality: return "Religion & Spirituality"
+case .buddhism: return "Buddhism"
+case .christianity: return "Christianity"
+case .comparativeReligion: return "Comparative Religion"
+case .hinduism: return "Hinduism"
+case .islam: return "Islam"
+case .judaism: return "Judaism"
+case .otherReligions: return "Other Religions"
+case .spirituality: return "Spirituality"
+
+
+case languages = 40000056
+case africanLanguages = 40000057
+case ancientLanguages = 40000058
+case english = 40000061
+case french = 40000063
+case german = 40000064
+case italian = 40000065
+case linguistics = 40000066
+case spanish = 40000068
+case speechPathology = 40000069
+case arabic = 40000130
+case chinese = 40000131
+case hebrew = 40000132
+case hindi = 40000133
+case indigenousLanguages = 40000134
+case japanese = 40000135
+case korean = 40000136
+case otherLanguages = 40000137
+case portuguese = 40000138
+case russian = 40000139
+case dutch = 40000173
+case luxembourgish = 40000174
+case swedish = 40000175
+case norwegian = 40000176
+case finnish = 40000177
+case danish = 40000178
+case polish = 40000179
+case turkish = 40000180
+case flemish = 40000181
+
+case .languages: return "Languages"
+case .africanLanguages: return "African Languages"
+case .ancientLanguages: return "Ancient Languages"
+case .english: return "English"
+case .french: return "French"
+case .german: return "German"
+case .italian: return "Italian"
+case .linguistics: return "Linguistics"
+case .spanish: return "Spanish"
+case .speechPathology: return "Speech Pathology"
+case .arabic: return "Arabic"
+case .chinese: return "Chinese"
+case .hebrew: return "Hebrew"
+case .hindi: return "Hindi"
+case .indigenousLanguages: return "Indigenous Languages"
+case .japanese: return "Japanese"
+case .korean: return "Korean"
+case .otherLanguages: return "Other Languages"
+case .portuguese: return "Portuguese"
+case .russian: return "Russian"
+case .dutch: return "Dutch"
+case .luxembourgish: return "Luxembourgish"
+case .swedish: return "Swedish"
+case .norwegian: return "Norwegian"
+case .finnish: return "Finnish"
+case .danish: return "Danish"
+case .polish: return "Polish"
+case .turkish: return "Turkish"
+case .flemish: return "Flemish"
+
+case writingAndLiterature = 40000070
+case anthologies = 40000071
+case biography = 40000072
+case classics = 40000073
+case literaryCriticism = 40000074
+case fiction = 40000075
+case poetry = 40000076
+case comparativeLiterature = 40000145
+
+case .writingAndLiterature: return "Writing & Literature"
+case .anthologies: return "Anthologies"
+case .biography: return "Biography"
+case .classics: return "Classics"
+case .literaryCriticism: return "Literary Criticism"
+case .fiction: return "Fiction"
+case .poetry: return "Poetry"
+case .comparativeLiterature: return "Comparative Literature"
+
+case mathematics = 40000077
+case advancedMathematics = 40000078
+case algebra = 40000079
+case arithmetic = 40000080
+case calculus = 40000081
+case geometry = 40000082
+case statistics = 40000083
+
+case .mathematics: return "Mathematics"
+case .advancedMathematics: return "Advanced Mathematics"
+case .algebra: return "Algebra"
+case .arithmetic: return "Arithmetic"
+case .calculus: return "Calculus"
+case .geometry: return "Geometry"
+case .statistics: return "Statistics"
+
+case science = 40000084
+case agricultural = 40000085
+case astronomy = 40000086
+case atmosphere = 40000087
+case biology = 40000088
+case chemistry = 40000089
+case ecology = 40000090
+case geography = 40000091
+case geology = 40000092
+case physics = 40000093
+case environment = 40000164
+
+case .science: return "Science"
+case .agricultural: return "Agricultural"
+case .astronomy: return "Astronomy"
+case .atmosphere: return "Atmosphere"
+case .biology: return "Biology"
+case .chemistry: return "Chemistry"
+case .ecology: return "Ecology"
+case .geography: return "Geography"
+case .geology: return "Geology"
+case .physics: return "Physics"
+case .environment: return "Environment"
+
+case lawAndPolitics = 40000140
+case law = 40000095
+case politicalScience = 40000096
+case publicAdministration = 40000097
+case foreignPolicyAndInternationalRelations = 40000141
+case localGovernments = 40000142
+case nationalGovernments = 40000143
+case worldAffairs = 40000144
+
+case .lawAndPolitics: return "Law & Politics"
+case .law: return "Law"
+case .politicalScience: return "Political Science"
+case .publicAdministration: return "Public Administration"
+case .foreignPolicyAndInternationalRelations: return "Foreign Policy & International Relations"
+case .localGovernments: return "Local Governments"
+case .nationalGovernments: return "National Governments"
+case .worldAffairs: return "World Affairs"
+
+case socialScience = 40000094
+case psychology = 40000098
+case socialWelfare = 40000099
+case sociology = 40000100
+case archaeology = 40000154
+case anthropology = 40000155
+
+case .socialScience: return "Social Science"
+case .psychology: return "Psychology"
+case .socialWelfare: return "Social Welfare"
+case .sociology: return "Sociology"
+case .archaeology: return "Archaeology"
+case .athropology: return "Anthropology"
+
+case society = 40000101
+case asiaPacificStudies = 40000103
+case europeanStudies = 40000104
+case indigenousStudies = 40000105
+case latinAndCaribbeanStudies = 40000106
+case middleEasternStudies = 40000107
+case womensStudies = 40000108
+case africanStudies = 40000165
+case americanStudies = 40000166
+case crossCulturalStudies = 40000167
+case immigrationAndEmigration = 40000168
+case raceAndEthnicityStudies = 40000169
+case sexualityStudies = 40000170
+
+case .society: return "Society"
+case .asiaPacificStudies: return "Asia Pacific Studies"
+case .europeanStudies: return "European Studies"
+case .indigenousStudies: return "Indigenous Studies"
+case .latinAndCaribbeanStudies: return "Latin & Caribbean Studies"
+case .middleEasternStudies: return "Middle Eastern Studies"
+case .womensStudies: return "Women's Studies"
+case .africanStudies: return "African Studies"
+case .americanStudies: return "American Studies"
+case .crossCulturalStudies: return "Cross-cultural Studies"
+case .immigrationAndEmigration: return "Immigration & Emigration"
+case. raceAndEthnicity Studies: return "Race & Ethnicity Studies"
+case .sexualityStudies: return "Sexuality Studies"
+
+
+case teachingAndLearning = 40000109
+case curriculumAndTeaching = 40000110
+case educationalLeadership = 40000111
+case familyAndChildcare = 40000112
+case learningResources = 40000113
+case psychologyAndResearch = 40000114
+case specialEducation = 40000115
+case educationalTechnology = 40000171
+case informationLibraryScience = 40000172
+
+case .teachingAndLearning: return "Teaching & Learning"
+case .curriculumAndTeaching: return "Curriculum & Teaching"
+case .educationalLeadership: return "Educational Leadership"
+case .familyAndChildcare: return "Family & Childcare"
+case .learningResources: return "Learning Resources"
+case .psychologyAndResearch: return "Psychology & Research"
+case .specialEducation: return "Special Education"
+case .educationalTechnology: return "Educational Technology"
+case .informationLibraryScience: return "Information/Library Science"
