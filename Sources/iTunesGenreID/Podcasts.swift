@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum Podcasts {
+enum Podcasts: CaseIterable {
     case podcasts
     case newsAndPolitics
     case history

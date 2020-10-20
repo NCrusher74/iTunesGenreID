@@ -1,16 +1,80 @@
 //
-//  File.swift
-//
+//  Textbooks.swift
+//  
 //
 //  Created by Nolaine Crusher on 10/19/20.
 //
 
 import Foundation
-enum Textbooks {
+enum Textbooks: CaseIterable {
     case textbooks
     case biographiesAndMemoirs
     case humor
     case parenting
+    case artsAndEntertainment(ArtsAndEntertainment)
+    case businessAndPersonalFinance(BusinessAndPersonalFinance)
+    case childrenAndTeens(ChildrenAndTeens)
+    case comicsAndGraphicNovels(ComicsAndGraphicNovels)
+    case communicationsAndMedia(CommunicationsAndMedia)
+    case computersAndInternet(ComputersAndInternet)
+    case cookbooksFoodAndWine(CookbooksFoodAndWine)
+    case engineering(Engineering)
+    case fictionAndLiterature(FictionAndLiterature)
+    case healthMindAndBody(HealthMindAndBody)
+    case history(History)
+    case languageStudies(LanguageStudies)
+    case lifestyleAndHome(LifestyleAndHome)
+    case mathematics(Mathematics)
+    case medicine(Medicine)
+    case mysteriesAndThrillers(MysteriesAndThrillers)
+    case nonfiction(Nonfiction)
+    case philosophy(Philosophy)
+    case politicsAndCurrentEvents(PoliticsAndCurrentEvents)
+    case professionalAndTechnical(ProfessionalAndTechnical)
+    case reference(Reference)
+    case religionAndSpirituality(ReligionAndSpirituality)
+    case romance(Romance)
+    case sciFiAndFantasy(SciFiAndFantasy)
+    case scienceAndNature(ScienceAndNature)
+    case socialScience(SocialScience)
+    case society(Society)
+    case sportsAndOutdoors(SportsAndOutdoors)
+    case teachingAndLearning(TeachingAndLearning)
+    case travelAndAdventure(TravelAndAdventure)
+    
+    static var allCases: [Textbooks] {
+        var array: [Textbooks] = [.textbooks, .biographiesAndMemoirs, .humor, .parenting]
+        array.append(contentsOf: ArtsAndEntertainment.allCases.map({Textbooks.artsAndEntertainment($0)}))
+        array.append(contentsOf: BusinessAndPersonalFinance.allCases.map({Textbooks.businessAndPersonalFinance($0)}))
+        array.append(contentsOf: ChildrenAndTeens.allCases.map({Textbooks.childrenAndTeens($0)}))
+        array.append(contentsOf: ComicsAndGraphicNovels.allCases.map({Textbooks.comicsAndGraphicNovels($0)}))
+        array.append(contentsOf: CommunicationsAndMedia.allCases.map({Textbooks.communicationsAndMedia($0)}))
+        array.append(contentsOf: ComputersAndInternet.allCases.map({Textbooks.computersAndInternet($0)}))
+        array.append(contentsOf: CookbooksFoodAndWine.allCases.map({Textbooks.cookbooksFoodAndWine($0)}))
+        array.append(contentsOf: Engineering.allCases.map({Textbooks.engineering($0)}))
+        array.append(contentsOf: FictionAndLiterature.allCases.map({Textbooks.fictionAndLiterature($0)}))
+        array.append(contentsOf: HealthMindAndBody.allCases.map({Textbooks.healthMindAndBody($0)}))
+        array.append(contentsOf: History.allCases.map({Textbooks.history($0)}))
+        array.append(contentsOf: LanguageStudies.allCases.map({Textbooks.languageStudies($0)}))
+        array.append(contentsOf: LifestyleAndHome.allCases.map({Textbooks.lifestyleAndHome($0)}))
+        array.append(contentsOf: Mathematics.allCases.map({Textbooks.mathematics($0)}))
+        array.append(contentsOf: MysteriesAndThrillers.allCases.map({Textbooks.mysteriesAndThrillers($0)}))
+        array.append(contentsOf: Nonfiction.allCases.map({Textbooks.nonfiction($0)}))
+        array.append(contentsOf: Philosophy.allCases.map({Textbooks.philosophy($0)}))
+        array.append(contentsOf: PoliticsAndCurrentEvents.allCases.map({Textbooks.politicsAndCurrentEvents($0)}))
+        array.append(contentsOf: ProfessionalAndTechnical.allCases.map({Textbooks.professionalAndTechnical($0)}))
+        array.append(contentsOf: Reference.allCases.map({Textbooks.reference($0)}))
+        array.append(contentsOf: ReligionAndSpirituality.allCases.map({Textbooks.religionAndSpirituality($0)}))
+        array.append(contentsOf: Romance.allCases.map({Textbooks.romance($0)}))
+        array.append(contentsOf: SciFiAndFantasy.allCases.map({Textbooks.sciFiAndFantasy($0)}))
+        array.append(contentsOf: ScienceAndNature.allCases.map({Textbooks.scienceAndNature($0)}))
+        array.append(contentsOf: SocialScience.allCases.map({Textbooks.socialScience($0)}))
+        array.append(contentsOf: Society.allCases.map({Textbooks.society($0)}))
+        array.append(contentsOf: SportsAndOutdoors.allCases.map({Textbooks.sportsAndOutdoors($0)}))
+        array.append(contentsOf: TeachingAndLearning.allCases.map({Textbooks.teachingAndLearning($0)}))
+        array.append(contentsOf: TravelAndAdventure.allCases.map({Textbooks.travelAndAdventure($0)}))
+        return array
+    }
     
     var identifier: Int {
         switch self {
@@ -18,6 +82,36 @@ enum Textbooks {
             case .biographiesAndMemoirs: return 15017
             case .humor: return 15108
             case .parenting: return 15166
+            case .artsAndEntertainment(let subject): return subject.identifier
+            case .businessAndPersonalFinance(let subject): return subject.rawValue
+            case .childrenAndTeens(let subject): return subject.rawValue
+            case .comicsAndGraphicNovels(let subject): return subject.rawValue
+            case .communicationsAndMedia(let subject): return subject.rawValue
+            case .computersAndInternet(let subject): return subject.rawValue
+            case .cookbooksFoodAndWine(let subject): return subject.rawValue
+            case .engineering(let subject): return subject.rawValue
+            case .fictionAndLiterature(let subject): return subject.rawValue
+            case .healthMindAndBody(let subject): return subject.rawValue
+            case .history(let subject): return subject.identifier
+            case .languageStudies(let subject): return subject.rawValue
+            case .lifestyleAndHome(let subject): return subject.rawValue
+            case .mathematics(let subject): return subject.rawValue
+            case .medicine(let subject): return subject.rawValue
+            case .mysteriesAndThrillers(let subject): return subject.rawValue
+            case .nonfiction(let subject): return subject.rawValue
+            case .philosophy(let subject): return subject.rawValue
+            case .politicsAndCurrentEvents(let subject): return subject.rawValue
+            case .professionalAndTechnical(let subject): return subject.rawValue
+            case .reference(let subject): return subject.rawValue
+            case .religionAndSpirituality(let subject): return subject.rawValue
+            case .romance(let subject): return subject.rawValue
+            case .sciFiAndFantasy(let subject): return subject.identifier
+            case .scienceAndNature(let subject): return subject.rawValue
+            case .socialScience(let subject): return subject.rawValue
+            case .society(let subject): return subject.rawValue
+            case .sportsAndOutdoors(let subject): return subject.rawValue
+            case .teachingAndLearning(let subject): return subject.rawValue
+            case .travelAndAdventure(let subject): return subject.identifier
         }
     }
     
@@ -27,10 +121,160 @@ enum Textbooks {
             case .biographiesAndMemoirs: return "Biographies & Memoirs"
             case .humor: return "Humor"
             case .parenting: return "Parenting"
+            case .artsAndEntertainment(let subject):
+                switch subject {
+                    case .artsAndEntertainment: return subject.stringValue
+                    default: return "\(ArtsAndEntertainment.artsAndEntertainment.stringValue)|\(subject.stringValue)"
+                }
+            case .businessAndPersonalFinance(let subject):
+                switch subject {
+                    case .businessAndPersonalFinance: return subject.stringValue
+                    default: return "\(BusinessAndPersonalFinance.businessAndPersonalFinance.stringValue)|\(subject.stringValue)"
+                }
+            case .childrenAndTeens(let subject):
+                switch subject {
+                    case .childrenAndTeens: return subject.stringValue
+                    default: return "\(ChildrenAndTeens.childrenAndTeens.stringValue)|\(subject.stringValue)"
+                }
+            case .comicsAndGraphicNovels(let subject):
+                switch subject {
+                    case .comicsAndGraphicNovels: return subject.stringValue
+                    default: return "\(ComicsAndGraphicNovels.comicsAndGraphicNovels.stringValue)|\(subject.stringValue)"
+                }
+            case .communicationsAndMedia(let subject):
+                switch subject {
+                    case .communicationsAndMedia: return subject.stringValue
+                    default: return "\(CommunicationsAndMedia.communicationsAndMedia.stringValue)|\(subject.stringValue)"
+                }
+            case .computersAndInternet(let subject):
+                switch subject {
+                    case .computersAndInternet: return subject.stringValue
+                    default: return "\(ComputersAndInternet.computersAndInternet.stringValue)|\(subject.stringValue)"
+                }
+            case .cookbooksFoodAndWine(let subject):
+                switch subject {
+                    case .cookbooksFoodAndWine: return subject.stringValue
+                    default: return "\(CookbooksFoodAndWine.cookbooksFoodAndWine.stringValue)|\(subject.stringValue)"
+                }
+            case .engineering(let subject):
+                switch subject {
+                    case .engineering: return subject.stringValue
+                    default: return "\(Engineering.engineering.stringValue)|\(subject.stringValue)"
+                }
+            case .fictionAndLiterature(let subject):
+                switch subject {
+                    case .fictionAndLiterature: return subject.stringValue
+                    default: return "\(FictionAndLiterature.fictionAndLiterature.stringValue)|\(subject.stringValue)"
+                }
+            case .healthMindAndBody(let subject):
+                switch subject {
+                    case .healthMindAndBody: return subject.stringValue
+                    default: return "\(HealthMindAndBody.healthMindAndBody.stringValue)|\(subject.stringValue)"
+                }
+            case .history(let subject):
+                switch subject {
+                    case .history: return subject.stringValue
+                    default: return "\(History.history.stringValue)|\(subject.stringValue)"
+                }
+            case .languageStudies(let subject):
+                switch subject {
+                    case .languageStudies: return subject.stringValue
+                    default: return "\(LanguageStudies.languageStudies.stringValue)|\(subject.stringValue)"
+                }
+            case .lifestyleAndHome(let subject):
+                switch subject {
+                    case .lifestyleAndHome: return subject.stringValue
+                    default: return "\(LifestyleAndHome.lifestyleAndHome.stringValue)|\(subject.stringValue)"
+                }
+            case .mathematics(let subject):
+                switch subject {
+                    case .mathematics: return subject.stringValue
+                    default: return "\(Mathematics.mathematics.stringValue)|\(subject.stringValue)"
+                }
+            case .medicine(let subject):
+                switch subject {
+                    case .medicine: return subject.stringValue
+                    default: return "\(Medicine.medicine.stringValue)|\(subject.stringValue)"
+                }
+            case .mysteriesAndThrillers(let subject):
+                switch subject {
+                    case .mysteriesAndThrillers: return subject.stringValue
+                    default: return "\(MysteriesAndThrillers.mysteriesAndThrillers.stringValue)|\(subject.stringValue)"
+                }
+            case .nonfiction(let subject):
+                switch subject {
+                    case .nonfiction: return subject.stringValue
+                    default: return "\(Nonfiction.nonfiction.stringValue)|\(subject.stringValue)"
+                }
+            case .philosophy(let subject):
+                switch subject {
+                    case .philosophy: return subject.stringValue
+                    default: return "\(Philosophy.philosophy.stringValue)|\(subject.stringValue)"
+                }
+            case .politicsAndCurrentEvents(let subject):
+                switch subject {
+                    case .politicsAndCurrentEvents: return subject.stringValue
+                    default: return "\(PoliticsAndCurrentEvents.politicsAndCurrentEvents.stringValue)|\(subject.stringValue)"
+                }
+            case .professionalAndTechnical(let subject):
+                switch subject {
+                    case .professionalAndTechnical: return subject.stringValue
+                    default: return "\(ProfessionalAndTechnical.professionalAndTechnical.stringValue)|\(subject.stringValue)"
+                }
+            case .reference(let subject):
+                switch subject {
+                    case .reference: return subject.stringValue
+                    default: return "\(Reference.reference.stringValue)|\(subject.stringValue)"
+                }
+            case .religionAndSpirituality(let subject):
+                switch subject {
+                    case .religionAndSpirituality: return subject.stringValue
+                    default: return "\(ReligionAndSpirituality.religionAndSpirituality.stringValue)|\(subject.stringValue)"
+                }
+            case .romance(let subject):
+                switch subject {
+                    case .romance: return subject.stringValue
+                    default: return "\(Romance.romance.stringValue)|\(subject.stringValue)"
+                }
+            case .sciFiAndFantasy(let subject):
+                switch subject {
+                    case .sciFiAndFantasy: return subject.stringValue
+                    default: return "\(SciFiAndFantasy.sciFiAndFantasy.stringValue)|\(subject.stringValue)"
+                }
+            case .scienceAndNature(let subject):
+                switch subject {
+                    case .scienceAndNature: return subject.stringValue
+                    default: return "\(ScienceAndNature.scienceAndNature.stringValue)|\(subject.stringValue)"
+                }
+            case .socialScience(let subject):
+                switch subject {
+                    case .socialScience: return subject.stringValue
+                    default: return "\(SocialScience.socialScience.stringValue)|\(subject.stringValue)"
+                }
+            case .society(let subject):
+                switch subject {
+                    case .society: return subject.stringValue
+                    default: return "\(Society.society.stringValue)|\(subject.stringValue)"
+                }
+            case .sportsAndOutdoors(let subject):
+                switch subject {
+                    case .sportsAndOutdoors: return subject.stringValue
+                    default: return "\(SportsAndOutdoors.sportsAndOutdoors.stringValue)|\(subject.stringValue)"
+                }
+            case .teachingAndLearning(let subject):
+                switch subject {
+                    case .teachingAndLearning: return subject.stringValue
+                    default: return "\(TeachingAndLearning.teachingAndLearning.stringValue)|\(subject.stringValue)"
+                }
+            case .travelAndAdventure(let subject):
+                switch subject {
+                    case .travelAndAdventure: return subject.stringValue
+                    default: return "\(TravelAndAdventure.travelAndAdventure.stringValue)|\(subject.stringValue)"
+                }
         }
     }
     
-    enum ArtsAndEntertainment {
+    enum ArtsAndEntertainment: CaseIterable {
         case artsAndEntertainment
         case artHistory
         case dance
@@ -47,6 +291,12 @@ enum Textbooks {
         case tv
         case visualArts
         case artAndArchitecture(ArtAndArchitecture)
+        
+        static var allCases: [ArtsAndEntertainment] {
+            var array: [ArtsAndEntertainment] = [.artsAndEntertainment, .artHistory, .dance, .fashion, .film, .games, .interiorDesign, .mediaArts, .music, .photography, .photography, .theater, .tv, .visualArts]
+            array.append(contentsOf: ArtAndArchitecture.allCases.map({ArtsAndEntertainment.artAndArchitecture($0)}))
+            return array
+        }
         
         var identifier: Int {
             switch self {
@@ -335,7 +585,7 @@ enum Textbooks {
         }
     }
     
-    enum History {
+    enum History: CaseIterable {
         case history
         case africa
         case ancient
@@ -346,6 +596,12 @@ enum Textbooks {
         case military
         case world
         case americas(Americas)
+        
+        static var allCases: [History] {
+            var array: [History] = [.history, .africa, .ancient, .asia, .australiaAndOceania, .europe, .middleEast, .military, .world]
+            array.append(contentsOf: Americas.allCases.map({History.americas($0)}))
+            return array
+        }
         
         var identifier: Int {
             switch self {
@@ -448,7 +704,7 @@ enum Textbooks {
         }
     }
     
-    enum LifeStyleAndHome: Int, CaseIterable {
+    enum LifestyleAndHome: Int, CaseIterable {
         case lifestyleAndHome = 15130
         case antiquesAndCollectibles = 15131
         case craftsAndHobbies = 15132
@@ -716,11 +972,18 @@ enum Textbooks {
         }
     }
     
-    enum SciFiAndFantasy {
+    enum SciFiAndFantasy: CaseIterable {
         case sciFiAndFantasy
         case scienceFiction
         case fantasy(Fantasy)
         case scienceFictionAndLiterature(ScienceFictionAndLiterature)
+        
+        static var allCases: [SciFiAndFantasy] {
+            var array: [SciFiAndFantasy] = [.sciFiAndFantasy, .scienceFiction]
+            array.append(contentsOf: Fantasy.allCases.map({SciFiAndFantasy.fantasy($0)}))
+            array.append(contentsOf: ScienceFictionAndLiterature.allCases.map({SciFiAndFantasy.scienceFictionAndLiterature($0)}))
+            return array
+        }
         
         var identifier: Int {
             switch self {
@@ -957,7 +1220,7 @@ enum Textbooks {
         }
     }
     
-    enum TravelAndAdventure {
+    enum TravelAndAdventure: CaseIterable {
         case travelAndAdventure
         case africa
         case asia
@@ -968,6 +1231,12 @@ enum Textbooks {
         case oceania
         case specialtyTravel
         case americas(Americas)
+        
+        static var allCases: [TravelAndAdventure] {
+            var array: [TravelAndAdventure] = [.travelAndAdventure, .africa, .asia, .caribbean, .essaysAndMemoirs, .europe, .middleEast, .oceania, .specialtyTravel]
+            array.append(contentsOf: Americas.allCases.map({TravelAndAdventure.americas($0)}))
+            return array
+        }
         
         var identifier: Int {
             switch self {

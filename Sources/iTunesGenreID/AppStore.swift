@@ -311,8 +311,7 @@ enum MacAppStore: CaseIterable {
             .video,
             .weather,
             .graphicsAndDesign]
-        let games = Games.allCases.map({MacAppStore.games($0)})
-        array.append(contentsOf: games)
+        array.append(contentsOf: Games.allCases.map({MacAppStore.games($0)}))
         return array
     }
     

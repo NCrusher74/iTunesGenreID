@@ -1,500 +1,1562 @@
+enum Books {
+case books
+case parenting
+case militaryAndWarfare
 
-9002	= Books|Nonfiction
-9003	= Books|Romance
-9004	= Books|Travel & Adventure
-9007	= Books|Arts & Entertainment
-9008	= Books|Biographies & Memoirs
-9009	= Books|Business & Personal Finance
-9010	= Books|Children & Teens
-9012	= Books|Humor
-9015	= Books|History
-9018	= Books|Religion & Spirituality
-9019	= Books|Science & Nature
-9020	= Books|Sci-Fi & Fantasy
-9024	= Books|Lifestyle & Home
-9025	= Books|Self-Development
-9026	= Books|Comics & Graphic Novels
-9027	= Books|Computers & Internet
-9028	= Books|Cookbooks, Food & Wine
-9029	= Books|Professional & Technical
-9030	= Books|Parenting
-9031	= Books|Fiction & Literature
-9032	= Books|Mysteries & Thrillers
-9033	= Books|Reference
-9034	= Books|Politics & Current Events
-9035	= Books|Sports & Outdoors
-10001	= Books|Lifestyle & Home|Antiques & Collectibles
-10002	= Books|Arts & Entertainment|Art & Architecture
-10003	= Books|Religion & Spirituality|Bibles
-10004	= Books|Self-Development|Spirituality
-10005	= Books|Business & Personal Finance|Industries & Professions
-10006	= Books|Business & Personal Finance|Marketing & Sales
-10007	= Books|Business & Personal Finance|Small Business & Entrepreneurship
-10008	= Books|Business & Personal Finance|Personal Finance
-10009	= Books|Business & Personal Finance|Reference
-10010	= Books|Business & Personal Finance|Careers
-10011	= Books|Business & Personal Finance|Economics
-10012	= Books|Business & Personal Finance|Investing
-10013	= Books|Business & Personal Finance|Finance
-10014	= Books|Business & Personal Finance|Management & Leadership
-10015	= Books|Comics & Graphic Novels|Graphic Novels
-10016	= Books|Comics & Graphic Novels|Manga
-10017	= Books|Computers & Internet|Computers
-10018	= Books|Computers & Internet|Databases
-10019	= Books|Computers & Internet|Digital Media
-10020	= Books|Computers & Internet|Internet
-10021	= Books|Computers & Internet|Network
-10022	= Books|Computers & Internet|Operating Systems
-10023	= Books|Computers & Internet|Programming
-10024	= Books|Computers & Internet|Software
-10025	= Books|Computers & Internet|System Administration
-10026	= Books|Cookbooks, Food & Wine|Beverages
-10027	= Books|Cookbooks, Food & Wine|Courses & Dishes
-10028	= Books|Cookbooks, Food & Wine|Special Diet
-10029	= Books|Cookbooks, Food & Wine|Special Occasions
-10030	= Books|Cookbooks, Food & Wine|Methods
-10031	= Books|Cookbooks, Food & Wine|Reference
-10032	= Books|Cookbooks, Food & Wine|Regional & Ethnic
-10033	= Books|Cookbooks, Food & Wine|Specific Ingredients
-10034	= Books|Lifestyle & Home|Crafts & Hobbies
-10035	= Books|Professional & Technical|Design
-10036	= Books|Arts & Entertainment|Theater
-10037	= Books|Professional & Technical|Education
-10038	= Books|Nonfiction|Family & Relationships
-10039	= Books|Fiction & Literature|Action & Adventure
-10040	= Books|Fiction & Literature|African American
-10041	= Books|Fiction & Literature|Religious
-10042	= Books|Fiction & Literature|Classics
-10043	= Books|Fiction & Literature|Erotica
-10044	= Books|Sci-Fi & Fantasy|Fantasy
-10045	= Books|Fiction & Literature|Gay
-10046	= Books|Fiction & Literature|Ghost
-10047	= Books|Fiction & Literature|Historical
-10048	= Books|Fiction & Literature|Horror
-10049	= Books|Fiction & Literature|Literary
-10050	= Books|Mysteries & Thrillers|Hard-Boiled
-10051	= Books|Mysteries & Thrillers|Historical
-10052	= Books|Mysteries & Thrillers|Police Procedural
-10053	= Books|Mysteries & Thrillers|Short Stories
-10054	= Books|Mysteries & Thrillers|British Detectives
-10055	= Books|Mysteries & Thrillers|Women Sleuths
-10056	= Books|Romance|Erotic Romance
-10057	= Books|Romance|Contemporary
-10058	= Books|Romance|Paranormal
-10059	= Books|Romance|Historical
-10060	= Books|Romance|Short Stories
-10061	= Books|Romance|Suspense
-10062	= Books|Romance|Western
-10063	= Books|Sci-Fi & Fantasy|Science Fiction
-10064	= Books|Sci-Fi & Fantasy|Science Fiction & Literature
-10065	= Books|Fiction & Literature|Short Stories
-10066	= Books|Reference|Foreign Languages
-10067	= Books|Arts & Entertainment|Games
-10068	= Books|Lifestyle & Home|Gardening
-10069	= Books|Self-Development|Health & Fitness
-10070	= Books|History|Africa
-10071	= Books|History|Americas
-10072	= Books|History|Ancient
-10073	= Books|History|Asia
-10074	= Books|History|Australia & Oceania
-10075	= Books|History|Europe
-10076	= Books|History|Latin America
-10077	= Books|History|Middle East
-10078	= Books|History|Military
-10079	= Books|History|United States
-10080	= Books|History|World
-10081	= Books|Children & Teens|Children's Fiction
-10082	= Books|Children & Teens|Children's Nonfiction
-10083	= Books|Professional & Technical|Law
-10084	= Books|Fiction & Literature|Literary Criticism
-10085	= Books|Science & Nature|Mathematics
-10086	= Books|Professional & Technical|Medical
-10087	= Books|Arts & Entertainment|Music
-10088	= Books|Science & Nature|Nature
-10089	= Books|Arts & Entertainment|Performing Arts
-10090	= Books|Lifestyle & Home|Pets
-10091	= Books|Nonfiction|Philosophy
-10092	= Books|Arts & Entertainment|Photography
-10093	= Books|Fiction & Literature|Poetry
-10094	= Books|Self-Development|Psychology
-10095	= Books|Reference|Almanacs & Yearbooks
-10096	= Books|Reference|Atlases & Maps
-10097	= Books|Reference|Catalogs & Directories
-10098	= Books|Reference|Consumer Guides
-10099	= Books|Reference|Dictionaries & Thesauruses
-10100	= Books|Reference|Encyclopedias
-10101	= Books|Reference|Etiquette
-10102	= Books|Reference|Quotations
-10103	= Books|Reference|Words & Language
-10104	= Books|Reference|Writing
-10105	= Books|Religion & Spirituality|Bible Studies
-10106	= Books|Religion & Spirituality|Buddhism
-10107	= Books|Religion & Spirituality|Christianity
-10108	= Books|Religion & Spirituality|Hinduism
-10109	= Books|Religion & Spirituality|Islam
-10110	= Books|Religion & Spirituality|Judaism
-10111	= Books|Science & Nature|Astronomy
-10112	= Books|Science & Nature|Chemistry
-10113	= Books|Science & Nature|Earth Sciences
-10114	= Books|Science & Nature|Essays
-10115	= Books|Science & Nature|History
-10116	= Books|Science & Nature|Life Sciences
-10117	= Books|Science & Nature|Physics
-10118	= Books|Science & Nature|Reference
-10119	= Books|Self-Development|Self-Improvement
-10120	= Books|Nonfiction|Social Science
-10121	= Books|Sports & Outdoors|Baseball
-10122	= Books|Sports & Outdoors|Basketball
-10123	= Books|Sports & Outdoors|Coaching
-10124	= Books|Sports & Outdoors|Extreme Sports
-10125	= Books|Sports & Outdoors|Football
-10126	= Books|Sports & Outdoors|Golf
-10127	= Books|Sports & Outdoors|Hockey
-10128	= Books|Sports & Outdoors|Mountaineering
-10129	= Books|Sports & Outdoors|Outdoors
-10130	= Books|Sports & Outdoors|Racket Sports
-10131	= Books|Sports & Outdoors|Reference
-10132	= Books|Sports & Outdoors|Soccer
-10133	= Books|Sports & Outdoors|Training
-10134	= Books|Sports & Outdoors|Water Sports
-10135	= Books|Sports & Outdoors|Winter Sports
-10136	= Books|Reference|Study Aids
-10137	= Books|Professional & Technical|Engineering
-10138	= Books|Nonfiction|Transportation
-10139	= Books|Travel & Adventure|Africa
-10140	= Books|Travel & Adventure|Asia
-10141	= Books|Travel & Adventure|Specialty Travel
-10142	= Books|Travel & Adventure|Canada
-10143	= Books|Travel & Adventure|Caribbean
-10144	= Books|Travel & Adventure|Latin America
-10145	= Books|Travel & Adventure|Essays & Memoirs
-10146	= Books|Travel & Adventure|Europe
-10147	= Books|Travel & Adventure|Middle East
-10148	= Books|Travel & Adventure|United States
-10149	= Books|Nonfiction|True Crime
-11001	= Books|Sci-Fi & Fantasy|Fantasy|Contemporary
-11002	= Books|Sci-Fi & Fantasy|Fantasy|Epic
-11003	= Books|Sci-Fi & Fantasy|Fantasy|Historical
-11004	= Books|Sci-Fi & Fantasy|Fantasy|Paranormal
-11005	= Books|Sci-Fi & Fantasy|Fantasy|Short Stories
-11006	= Books|Sci-Fi & Fantasy|Science Fiction & Literature|Adventure
-11007	= Books|Sci-Fi & Fantasy|Science Fiction & Literature|High Tech
-11008	= Books|Sci-Fi & Fantasy|Science Fiction & Literature|Short Stories
-11009	= Books|Professional & Technical|Education|Language Arts & Disciplines
-11010	= Books|Communications & Media
-11011	= Books|Communications & Media|Broadcasting
-11012	= Books|Communications & Media|Digital Media
-11013	= Books|Communications & Media|Journalism
-11014	= Books|Communications & Media|Photojournalism
-11015	= Books|Communications & Media|Print
-11016	= Books|Communications & Media|Speech
-11017	= Books|Communications & Media|Writing
-11018	= Books|Arts & Entertainment|Art & Architecture|Urban Planning
-11019	= Books|Arts & Entertainment|Dance
-11020	= Books|Arts & Entertainment|Fashion
-11021	= Books|Arts & Entertainment|Film
-11022	= Books|Arts & Entertainment|Interior Design
-11023	= Books|Arts & Entertainment|Media Arts
-11024	= Books|Arts & Entertainment|Radio
-11025	= Books|Arts & Entertainment|TV
-11026	= Books|Arts & Entertainment|Visual Arts
-11027	= Books|Biographies & Memoirs|Arts & Entertainment
-11028	= Books|Biographies & Memoirs|Business
-11029	= Books|Biographies & Memoirs|Culinary
-11030	= Books|Biographies & Memoirs|Gay & Lesbian
-11031	= Books|Biographies & Memoirs|Historical
-11032	= Books|Biographies & Memoirs|Literary
-11033	= Books|Biographies & Memoirs|Media & Journalism
-11034	= Books|Biographies & Memoirs|Military
-11035	= Books|Biographies & Memoirs|Politics
-11036	= Books|Biographies & Memoirs|Religious
-11037	= Books|Biographies & Memoirs|Science & Technology
-11038	= Books|Biographies & Memoirs|Sports
-11039	= Books|Biographies & Memoirs|Women
-11040	= Books|Romance|New Adult
-11042	= Books|Romance|Romantic Comedy
-11043	= Books|Romance|Gay & Lesbian
-11044	= Books|Fiction & Literature|Essays
-11045	= Books|Fiction & Literature|Anthologies
-11046	= Books|Fiction & Literature|Comparative Literature
-11047	= Books|Fiction & Literature|Drama
-11049	= Books|Fiction & Literature|Fairy Tales, Myths & Fables
-11050	= Books|Fiction & Literature|Family
-11051	= Books|Comics & Graphic Novels|Manga|School Drama
-11052	= Books|Comics & Graphic Novels|Manga|Human Drama
-11053	= Books|Comics & Graphic Novels|Manga|Family Drama
-11054	= Books|Sports & Outdoors|Boxing
-11055	= Books|Sports & Outdoors|Cricket
-11056	= Books|Sports & Outdoors|Cycling
-11057	= Books|Sports & Outdoors|Equestrian
-11058	= Books|Sports & Outdoors|Martial Arts & Self Defense
-11059	= Books|Sports & Outdoors|Motor Sports
-11060	= Books|Sports & Outdoors|Rugby
-11061	= Books|Sports & Outdoors|Running
-11062	= Books|Self-Development|Diet & Nutrition
-11063	= Books|Science & Nature|Agriculture
-11064	= Books|Science & Nature|Atmosphere
-11065	= Books|Science & Nature|Biology
-11066	= Books|Science & Nature|Ecology
-11067	= Books|Science & Nature|Environment
-11068	= Books|Science & Nature|Geography
-11069	= Books|Science & Nature|Geology
-11070	= Books|Nonfiction|Social Science|Anthropology
-11071	= Books|Nonfiction|Social Science|Archaeology
-11072	= Books|Nonfiction|Social Science|Civics
-11073	= Books|Nonfiction|Social Science|Government
-11074	= Books|Nonfiction|Social Science|Social Studies
-11075	= Books|Nonfiction|Social Science|Social Welfare
-11076	= Books|Nonfiction|Social Science|Society
-11077	= Books|Nonfiction|Philosophy|Aesthetics
-11078	= Books|Nonfiction|Philosophy|Epistemology
-11079	= Books|Nonfiction|Philosophy|Ethics
-11080	= Books|Nonfiction|Philosophy|Language
-11081	= Books|Nonfiction|Philosophy|Logic
-11082	= Books|Nonfiction|Philosophy|Metaphysics
-11083	= Books|Nonfiction|Philosophy|Political
-11084	= Books|Nonfiction|Philosophy|Religion
-11085	= Books|Reference|Manuals
-11086	= Books|Kids
-11087	= Books|Kids|Animals
-11088	= Books|Kids|Basic Concepts
-11089	= Books|Kids|Basic Concepts|Alphabet
-11090	= Books|Kids|Basic Concepts|Body
-11091	= Books|Kids|Basic Concepts|Colors
-11092	= Books|Kids|Basic Concepts|Counting & Numbers
-11093	= Books|Kids|Basic Concepts|Date & Time
-11094	= Books|Kids|Basic Concepts|General
-11095	= Books|Kids|Basic Concepts|Money
-11096	= Books|Kids|Basic Concepts|Opposites
-11097	= Books|Kids|Basic Concepts|Seasons
-11098	= Books|Kids|Basic Concepts|Senses & Sensation
-11099	= Books|Kids|Basic Concepts|Size & Shape
-11100	= Books|Kids|Basic Concepts|Sounds
-11101	= Books|Kids|Basic Concepts|Words
-11102	= Books|Kids|Biography
-11103	= Books|Kids|Careers & Occupations
-11104	= Books|Kids|Computers & Technology
-11105	= Books|Kids|Cooking & Food
-11106	= Books|Kids|Arts & Entertainment
-11107	= Books|Kids|Arts & Entertainment|Art
-11108	= Books|Kids|Arts & Entertainment|Crafts
-11109	= Books|Kids|Arts & Entertainment|Music
-11110	= Books|Kids|Arts & Entertainment|Performing Arts
-11111	= Books|Kids|Family
-11112	= Books|Kids|Fiction
-11113	= Books|Kids|Fiction|Action & Adventure
-11114	= Books|Kids|Fiction|Animals
-11115	= Books|Kids|Fiction|Classics
-11116	= Books|Kids|Fiction|Comics & Graphic Novels
-11117	= Books|Kids|Fiction|Culture, Places & People
-11118	= Books|Kids|Fiction|Family & Relationships
-11119	= Books|Kids|Fiction|Fantasy
-11120	= Books|Kids|Fiction|Fairy Tales, Myths & Fables
-11121	= Books|Kids|Fiction|Favorite Characters
-11122	= Books|Kids|Fiction|Historical
-11123	= Books|Kids|Fiction|Holidays & Celebrations
-11124	= Books|Kids|Fiction|Monsters & Ghosts
-11125	= Books|Kids|Fiction|Mysteries
-11126	= Books|Kids|Fiction|Nature
-11127	= Books|Kids|Fiction|Religion
-11128	= Books|Kids|Fiction|Sci-Fi
-11129	= Books|Kids|Fiction|Social Issues
-11130	= Books|Kids|Fiction|Sports & Recreation
-11131	= Books|Kids|Fiction|Transportation
-11132	= Books|Kids|Games & Activities
-11133	= Books|Kids|General Nonfiction
-11134	= Books|Kids|Health
-11135	= Books|Kids|History
-11136	= Books|Kids|Holidays & Celebrations
-11137	= Books|Kids|Holidays & Celebrations|Birthdays
-11138	= Books|Kids|Holidays & Celebrations|Christmas & Advent
-11139	= Books|Kids|Holidays & Celebrations|Easter & Lent
-11140	= Books|Kids|Holidays & Celebrations|General
-11141	= Books|Kids|Holidays & Celebrations|Halloween
-11142	= Books|Kids|Holidays & Celebrations|Hanukkah
-11143	= Books|Kids|Holidays & Celebrations|Other
-11144	= Books|Kids|Holidays & Celebrations|Passover
-11145	= Books|Kids|Holidays & Celebrations|Patriotic Holidays
-11146	= Books|Kids|Holidays & Celebrations|Ramadan
-11147	= Books|Kids|Holidays & Celebrations|Thanksgiving
-11148	= Books|Kids|Holidays & Celebrations|Valentine's Day
-11149	= Books|Kids|Humor
-11150	= Books|Kids|Humor|Jokes & Riddles
-11151	= Books|Kids|Poetry
-11152	= Books|Kids|Learning to Read
-11153	= Books|Kids|Learning to Read|Chapter Books
-11154	= Books|Kids|Learning to Read|Early Readers
-11155	= Books|Kids|Learning to Read|Intermediate Readers
-11156	= Books|Kids|Nursery Rhymes
-11157	= Books|Kids|Government
-11158	= Books|Kids|Reference
-11159	= Books|Kids|Religion
-11160	= Books|Kids|Science & Nature
-11161	= Books|Kids|Social Issues
-11162	= Books|Kids|Social Studies
-11163	= Books|Kids|Sports & Recreation
-11164	= Books|Kids|Transportation
-11165	= Books|Young Adult
-11166	= Books|Young Adult|Animals
-11167	= Books|Young Adult|Biography
-11168	= Books|Young Adult|Careers & Occupations
-11169	= Books|Young Adult|Computers & Technology
-11170	= Books|Young Adult|Cooking & Food
-11171	= Books|Young Adult|Arts & Entertainment
-11172	= Books|Young Adult|Arts & Entertainment|Art
-11173	= Books|Young Adult|Arts & Entertainment|Crafts
-11174	= Books|Young Adult|Arts & Entertainment|Music
-11175	= Books|Young Adult|Arts & Entertainment|Performing Arts
-11176	= Books|Young Adult|Family
-11177	= Books|Young Adult|Fiction
-11178	= Books|Young Adult|Fiction|Action & Adventure
-11179	= Books|Young Adult|Fiction|Animals
-11180	= Books|Young Adult|Fiction|Classics
-11181	= Books|Young Adult|Fiction|Comics & Graphic Novels
-11182	= Books|Young Adult|Fiction|Culture, Places & People
-11183	= Books|Young Adult|Fiction|Dystopian
-11184	= Books|Young Adult|Fiction|Family & Relationships
-11185	= Books|Young Adult|Fiction|Fantasy
-11186	= Books|Young Adult|Fiction|Fairy Tales, Myths & Fables
-11187	= Books|Young Adult|Fiction|Favorite Characters
-11188	= Books|Young Adult|Fiction|Historical
-11189	= Books|Young Adult|Fiction|Holidays & Celebrations
-11190	= Books|Young Adult|Fiction|Horror, Monsters & Ghosts
-11191	= Books|Young Adult|Fiction|Crime & Mystery
-11192	= Books|Young Adult|Fiction|Nature
-11193	= Books|Young Adult|Fiction|Religion
-11194	= Books|Young Adult|Fiction|Romance
-11195	= Books|Young Adult|Fiction|Sci-Fi
-11196	= Books|Young Adult|Fiction|Coming of Age
-11197	= Books|Young Adult|Fiction|Sports & Recreation
-11198	= Books|Young Adult|Fiction|Transportation
-11199	= Books|Young Adult|Games & Activities
-11200	= Books|Young Adult|General Nonfiction
-11201	= Books|Young Adult|Health
-11202	= Books|Young Adult|History
-11203	= Books|Young Adult|Holidays & Celebrations
-11204	= Books|Young Adult|Holidays & Celebrations|Birthdays
-11205	= Books|Young Adult|Holidays & Celebrations|Christmas & Advent
-11206	= Books|Young Adult|Holidays & Celebrations|Easter & Lent
-11207	= Books|Young Adult|Holidays & Celebrations|General
-11208	= Books|Young Adult|Holidays & Celebrations|Halloween
-11209	= Books|Young Adult|Holidays & Celebrations|Hanukkah
-11210	= Books|Young Adult|Holidays & Celebrations|Other
-11211	= Books|Young Adult|Holidays & Celebrations|Passover
-11212	= Books|Young Adult|Holidays & Celebrations|Patriotic Holidays
-11213	= Books|Young Adult|Holidays & Celebrations|Ramadan
-11214	= Books|Young Adult|Holidays & Celebrations|Thanksgiving
-11215	= Books|Young Adult|Holidays & Celebrations|Valentine's Day
-11216	= Books|Young Adult|Humor
-11217	= Books|Young Adult|Humor|Jokes & Riddles
-11218	= Books|Young Adult|Poetry
-11219	= Books|Young Adult|Politics & Government
-11220	= Books|Young Adult|Reference
-11221	= Books|Young Adult|Religion
-11222	= Books|Young Adult|Science & Nature
-11223	= Books|Young Adult|Coming of Age
-11224	= Books|Young Adult|Social Studies
-11225	= Books|Young Adult|Sports & Recreation
-11226	= Books|Young Adult|Transportation
-11227	= Books|Communications & Media
-11228	= Books|Military & Warfare
-11229	= Books|Romance|Inspirational
-11231	= Books|Romance|Holiday
-11232	= Books|Romance|Wholesome
-11233	= Books|Romance|Military
-11234	= Books|Arts & Entertainment|Art History
-11236	= Books|Arts & Entertainment|Design
-11243	= Books|Business & Personal Finance|Accounting
-11244	= Books|Business & Personal Finance|Hospitality
-11245	= Books|Business & Personal Finance|Real Estate
-11246	= Books|Humor|Jokes & Riddles
-11247	= Books|Religion & Spirituality|Comparative Religion
-11255	= Books|Cookbooks, Food & Wine|Culinary Arts
-11259	= Books|Mysteries & Thrillers|Cozy
-11260	= Books|Politics & Current Events|Current Events
-11261	= Books|Politics & Current Events|Foreign Policy & International Relations
-11262	= Books|Politics & Current Events|Local Government
-11263	= Books|Politics & Current Events|National Government
-11264	= Books|Politics & Current Events|Political Science
-11265	= Books|Politics & Current Events|Public Administration
-11266	= Books|Politics & Current Events|World Affairs
-11273	= Books|Nonfiction|Family & Relationships|Family & Childcare
-11274	= Books|Nonfiction|Family & Relationships|Love & Romance
-11275	= Books|Sci-Fi & Fantasy|Fantasy|Urban
-11276	= Books|Reference|Foreign Languages|Arabic
-11277	= Books|Reference|Foreign Languages|Bilingual Editions
-11278	= Books|Reference|Foreign Languages|African Languages
-11279	= Books|Reference|Foreign Languages|Ancient Languages
-11280	= Books|Reference|Foreign Languages|Chinese
-11281	= Books|Reference|Foreign Languages|English
-11282	= Books|Reference|Foreign Languages|French
-11283	= Books|Reference|Foreign Languages|German
-11284	= Books|Reference|Foreign Languages|Hebrew
-11285	= Books|Reference|Foreign Languages|Hindi
-11286	= Books|Reference|Foreign Languages|Italian
-11287	= Books|Reference|Foreign Languages|Japanese
-11288	= Books|Reference|Foreign Languages|Korean
-11289	= Books|Reference|Foreign Languages|Linguistics
-11290	= Books|Reference|Foreign Languages|Other Languages
-11291	= Books|Reference|Foreign Languages|Portuguese
-11292	= Books|Reference|Foreign Languages|Russian
-11293	= Books|Reference|Foreign Languages|Spanish
-11294	= Books|Reference|Foreign Languages|Speech Pathology
-11295	= Books|Science & Nature|Mathematics|Advanced Mathematics
-11296	= Books|Science & Nature|Mathematics|Algebra
-11297	= Books|Science & Nature|Mathematics|Arithmetic
-11298	= Books|Science & Nature|Mathematics|Calculus
-11299	= Books|Science & Nature|Mathematics|Geometry
-11300	= Books|Science & Nature|Mathematics|Statistics
-11301	= Books|Professional & Technical|Medical|Veterinary
-11302	= Books|Professional & Technical|Medical|Neuroscience
-11303	= Books|Professional & Technical|Medical|Immunology
-11304	= Books|Professional & Technical|Medical|Nursing
-11305	= Books|Professional & Technical|Medical|Pharmacology & Toxicology
-11306	= Books|Professional & Technical|Medical|Anatomy & Physiology
-11307	= Books|Professional & Technical|Medical|Dentistry
-11308	= Books|Professional & Technical|Medical|Emergency Medicine
-11309	= Books|Professional & Technical|Medical|Genetics
-11310	= Books|Professional & Technical|Medical|Psychiatry
-11311	= Books|Professional & Technical|Medical|Radiology
-11312	= Books|Professional & Technical|Medical|Alternative Medicine
-11317	= Books|Nonfiction|Philosophy|Political Philosophy
-11319	= Books|Nonfiction|Philosophy|Philosophy of Language
-11320	= Books|Nonfiction|Philosophy|Philosophy of Religion
-11327	= Books|Nonfiction|Social Science|Sociology
-11329	= Books|Professional & Technical|Engineering|Aeronautics
-11330	= Books|Professional & Technical|Engineering|Chemical & Petroleum Engineering
-11331	= Books|Professional & Technical|Engineering|Civil Engineering
-11332	= Books|Professional & Technical|Engineering|Computer Science
-11333	= Books|Professional & Technical|Engineering|Electrical Engineering
-11334	= Books|Professional & Technical|Engineering|Environmental Engineering
-11335	= Books|Professional & Technical|Engineering|Mechanical Engineering
-11336	= Books|Professional & Technical|Engineering|Power Resources
-11337	= Books|Comics & Graphic Novels|Manga|Boys
-11338	= Books|Comics & Graphic Novels|Manga|Men
-11339	= Books|Comics & Graphic Novels|Manga|Girls
-11340	= Books|Comics & Graphic Novels|Manga|Women
-11341	= Books|Comics & Graphic Novels|Manga|Other
-11342	= Books|Comics & Graphic Novels|Manga|Yaoi
-11343	= Books|Comics & Graphic Novels|Manga|Comic Essays
-50000071	= Books|Comics & Graphic Novels|Manga|Action
-50000072	= Books|Comics & Graphic Novels|Manga|Comedy
-50000073	= Books|Comics & Graphic Novels|Manga|Erotica
-50000074	= Books|Comics & Graphic Novels|Manga|Fantasy
-50000075	= Books|Comics & Graphic Novels|Manga|Four Cell Manga
-50000076	= Books|Comics & Graphic Novels|Manga|Gay & Lesbian
-50000077	= Books|Comics & Graphic Novels|Manga|Hard-Boiled
-50000078	= Books|Comics & Graphic Novels|Manga|Heroes
-50000079	= Books|Comics & Graphic Novels|Manga|Historical Fiction
-50000080	= Books|Comics & Graphic Novels|Manga|Mecha
-50000081	= Books|Comics & Graphic Novels|Manga|Mystery
-50000082	= Books|Comics & Graphic Novels|Manga|Nonfiction
-50000083	= Books|Comics & Graphic Novels|Manga|Religious
-50000084	= Books|Comics & Graphic Novels|Manga|Romance
-50000085	= Books|Comics & Graphic Novels|Manga|Romantic Comedy
-50000086	= Books|Comics & Graphic Novels|Manga|Science Fiction
-50000087	= Books|Comics & Graphic Novels|Manga|Sports
-50000088	= Books|Fiction & Literature|Light Novels
-50000089	= Books|Comics & Graphic Novels|Manga|Horror
-50000090	= Books|Comics & Graphic Novels|Comics
-50000091	= Books|Romance|Multicultural
+var identifier: Int {
+switch self {
+case .books: return 38
+case .parenting: return 9030
+case .militaryAndWarfare: return 11228
+}
+}
+
+var stringValue: String {
+switch self {
+case .books: return "Books"
+case .parenting: return "Parenting"
+case .militaryAndWarfare: return "Military & Warfare"
+}
+}
+
+enum Nonfiction {
+case nonfiction
+case transportation
+case trueCrime
+case familyAndRelationships(FamilyAndRelationships)
+case philosophy(Philosophy)
+case socialScience(SocialScience)
+
+var identifier {
+switch self {
+case .nonfiction: return 9002
+case .transportation: return 10138
+case .trueCrime: return 10149
+}
+}
+
+var stringValue: String {
+switch self {
+case .nonfiction:return "Nonfiction"
+case .transportation:return "Transportation"
+case .trueCrime:return "True Crime"
+}
+}
+
+enum FamilyAndRelationships: Int, CaseIterable {
+case familyAndRelationships = 10038
+case FamilyAndChildcare = 11273
+case LoveAndRomance = 11274
+
+var stringValue: String {
+switch self {
+case .familyAndRelationships:return "Family & Relationships"
+case .FamilyAndChildcare:return "Family & Relationships|Family & Childcare"
+case .LoveAndRomance:return "Family & Relationships|Love & Romance"
+}
+}
+}
+
+enum Philosophy: Int, CaseIterable {
+case philosophy = 10091
+case aesthetics = 11077
+case epistemology = 11078
+case ethics = 11079
+case language = 11080
+case logic = 11081
+case metaphysics = 11082
+case political = 11083
+case religion = 11084
+case politicalPhilosophy = 11317
+case philosophyOfLanguage = 11319
+case philosophyOfReligion = 11320
+
+var stringValue: String {
+switch self {
+case .philosophy:return "Philosophy"
+case .aesthetics:return "Aesthetics"
+case .epistemology:return "Epistemology"
+case .ethics:return "Ethics"
+case .language:return "Language"
+case .logic:return "Logic"
+case .metaphysics:return "Metaphysics"
+case .political:return "Political"
+case .religion:return "Religion"
+case .politicalPhilosophy:return "Political Philosophy"
+case .philosophyOfLanguage:return "Philosophy of Language"
+case .philosophyOfReligion:return "Philosophy of Religion"
+}
+}
+}
+
+enum SocialScience: Int, CaseIterable {
+case socialScience = 10120
+case anthropology = 11070
+case archaeology = 11071
+case civics = 11072
+case government = 11073
+case socialStudies = 11074
+case socialWelfare = 11075
+case society = 11076
+case sociology = 11327
+
+var stringValue: String {
+switch self {
+case .socialScience:return "Social Science"
+case .anthropology:return "Anthropology"
+case .archaeology:return "Archaeology"
+case .civics:return "Civics"
+case .government:return "Government"
+case .socialStudies:return "Social Studies"
+case .socialWelfare:return "Social Welfare"
+case .society:return "Society"
+case .sociology:return "Sociology"
+}
+}
+}
+}
+
+enum Romance: Int, CaseIterable {
+case romance = 9003
+case eroticRomance = 10056
+case contemporary = 10057
+case paranormal = 10058
+case historical = 10059
+case shortStories = 10060
+case suspense = 10061
+case western = 10062
+case newAdult = 11040
+case romanticComedy = 11042
+case gayAndLesbian = 11043
+case inspirational = 11229
+case holiday = 11231
+case wholesome = 11232
+case military = 11233
+case multicultural = 50000091
+
+var stringValue: String {
+switch self {
+case .romance:return "Romance"
+case .eroticRomance:return "Erotic Romance"
+case .contemporary:return "Contemporary"
+case .paranormal:return "Paranormal"
+case .historical:return "Historical"
+case .shortStories:return "Short Stories"
+case .suspense:return "Suspense"
+case .western:return "Western"
+case .newAdult:return "New Adult"
+case .romanticComedy:return "Romantic Comedy"
+case .gayAndLesbian:return "Gay & Lesbian"
+case .inspirational:return "Inspirational"
+case .holiday:return "Holiday"
+case .wholesome:return "Wholesome"
+case .military:return "Military"
+case .multicultural:return "Multicultural"
+}
+}
+}
+
+enumTravelAndAdventure: Int, CaseIterable {
+case travelAndAdventure = 9004
+case africa = 10139
+case asia = 10140
+case specialtyTravel = 10141
+case canada = 10142
+case caribbean = 10143
+case latinAmerica = 10144
+case essaysAndMemoirs = 10145
+case europe = 10146
+case middleEast = 10147
+case unitedStates = 10148
+
+var stringValue: String {
+switch self {
+case .travelAndAdventure:return "Travel & Adventure"
+case .africa:return "Africa"
+case .asia:return "Asia"
+case .specialtyTravel:return "Specialty Travel"
+case .canada:return "Canada"
+case .caribbean:return "Caribbean"
+case .latinAmerica:return "Latin America"
+case .essaysAndMemoirs:return "Essays & Memoirs"
+case .europe:return "Europe"
+case .middleEast:return "Middle East"
+case .unitedStates:return "United States"
+}
+}
+}
+
+enum ArtsAndEntertainment {
+case artsAndEntertainment
+case theater
+case games
+case music
+case performingArts
+case photography
+case dance
+case fashion
+case film
+case interiorDesign
+case mediaArts
+case radio
+case tv
+case visualArts
+case artHistory
+case design
+case artAndArchitecture(ArtAndArchitecture)
+
+var identifier: Int {
+switch self {
+case .artsAndEntertainment: return 9007
+case .theater: return 10036
+case .games: return 10067
+case .music: return 10087
+case .performingArts: return 10089
+case .photography: return 10092
+case .dance: return 11019
+case .fashion: return 11020
+case .film: return 11021
+case .interiorDesign: return 11022
+case .mediaArts: return 11023
+case .radio: return 11024
+case .tv: return 11025
+case .visualArts: return 11026
+case .artHistory: return 11234
+case .design: return 11236
+}
+}
+
+var stringValue: String {
+switch self {
+case .artsAndEntertainment:return "Arts & Entertainment"
+case .theater:return "Theater"
+case .games:return "Games"
+case .music:return "Music"
+case .performingArts:return "Performing Arts"
+case .photography:return "Photography"
+case .dance:return "Dance"
+case .fashion:return "Fashion"
+case .film:return "Film"
+case .interiorDesign:return "Interior Design"
+case .mediaArts:return "Media Arts"
+case .radio:return "Radio"
+case .tv:return "TV"
+case .visualArts:return "Visual Arts"
+case .artHistory:return "Art History"
+case .design:return "Design"
+}
+}
+
+enum ArtAndArchitecture: Int, CaseIterable {
+case artAndArchitecture = 10002
+case urbanPlanning = 11018
+
+var stringValue: String {
+switch self {
+case .artAndArchitecture:return "Art & Architecture"
+case .urbanPlanning:return "Urban Planning"
+}
+}
+}
+}
+
+enum BiographiesAndMemoirs: Int, CaseIterable {
+case biographiesAndMemoirs = 9008
+case artsAndEntertainment = 11027
+case business = 11028
+case culinary = 11029
+case gayAndLesbian = 11030
+case historical = 11031
+case literary = 11032
+case mediaAndJournalism = 11033
+case military = 11034
+case politics = 11035
+case religious = 11036
+case scienceAndTechnology = 11037
+case sports = 11038
+case women = 11039
+
+var stringValue: String {
+switch self {
+case .biographiesAndMemoirs:return "Biographies & Memoirs"
+case .artsAndEntertainment:return "Arts & Entertainment"
+case .business:return "Business"
+case .culinary:return "Culinary"
+case .gayAndLesbian:return "Gay & Lesbian"
+case .historical:return "Historical"
+case .literary:return "Literary"
+case .mediaAndJournalism:return "Media & Journalism"
+case .military:return "Military"
+case .politics:return "Politics"
+case .religious:return "Religious"
+case .scienceAndTechnology:return "Science & Technology"
+case .sports:return "Sports"
+case .women:return "Women"
+}
+}
+}
+
+enum BusinessAndPersonalFinance: Int, CaseIterable {
+case businessAndPersonalFinance = 9009
+case industriesAndProfessions = 10005
+case marketingAndSales = 10006
+case smallBusinessAndEntrepreneurship = 10007
+case personalFinance = 10008
+case reference = 10009
+case careers = 10010
+case economics = 10011
+case investing = 10012
+case finance = 10013
+case managementAndLeadership = 10014
+case accounting = 11243
+case hospitality = 11244
+case realEstate = 11245
+
+var stringValue: String {
+switch self {
+case .businessAndPersonalFinance:return "Business & Personal Finance"
+case .industriesAndProfessions:return "Industries & Professions"
+case .marketingAndSales:return "Marketing & Sales"
+case .smallBusinessAndEntrepreneurship:return "Small Business & Entrepreneurship"
+case .personalFinance:return "Personal Finance"
+case .reference:return "Reference"
+case .careers:return "Careers"
+case .economics:return "Economics"
+case .investing:return "Investing"
+case .finance:return "Finance"
+case .managementAndLeadership:return "Management & Leadership"
+case .accounting:return "Accounting"
+case .hospitality:return "Hospitality"
+case .realEstate:return "Real Estate"
+}
+}
+}
+
+enum ChildrenAndTeens: Int, CaseIterable {
+case childrenAndTeens = 9010
+case childrensFiction = 10081
+case childrensNonfiction = 10082
+
+var stringValue: String {
+switch self {
+case .childrenAndTeens:return "Children & Teens"
+case .childrensFiction:return "Children's Fiction"
+case .childrensNonfiction:return "Children's Nonfiction"
+}
+}
+}
+
+enum Humor: Int, CaseIterable {
+case humor = 9012
+case jokesAndRiddles = 11246
+
+var stringValue: String {
+switch self {
+case .humor:return "Humor"
+case .jokesAndRiddles:return "Jokes & Riddles"
+}
+}
+}
+
+enum History: Int, CaseIterable {
+case history = 9015
+case africa = 10070
+case americas = 10071
+case ancient = 10072
+case asia = 10073
+case australiaAndOceania = 10074
+case europe = 10075
+case latinAmerica = 10076
+case middleEast = 10077
+case military = 10078
+case unitedStates = 10079
+case world = 10080
+
+var stringValue: String {
+switch self {
+case .history:return "History"
+case .africa:return "Africa"
+case .americas:return "Americas"
+case .ancient:return "Ancient"
+case .asia:return "Asia"
+case .australiaAndOceania:return "Australia & Oceania"
+case .europe:return "Europe"
+case .latinAmerica:return "Latin America"
+case .middleEast:return "Middle East"
+case .military:return "Military"
+case .unitedStates:return "United States"
+case .world:return "World"
+}
+}
+}
+
+enum ReligionAndSpirituality: Int, CaseIterable {
+case religionAndSpirituality = 9018
+case bibles = 10003
+case bibleStudies = 10105
+case buddhism = 10106
+case christianity = 10107
+case hinduism = 10108
+case islam = 10109
+case judaism = 10110
+case comparativeReligion = 11247
+
+var stringValue: String {
+switch self {
+case .religionAndSpirituality:return "Religion & Spirituality"
+case .bibles:return "Bibles"
+case .bibleStudies:return "Bible Studies"
+case .buddhism:return "Buddhism"
+case .christianity:return "Christianity"
+case .hinduism:return "Hinduism"
+case .islam:return "Islam"
+case .judaism:return "Judaism"
+case .comparativeReligion:return "Comparative Religion"
+}
+}
+}
+
+enum ScienceAndNature {
+case scienceAndNature
+case nature
+case astronomy
+case chemistry
+case earthSciences
+case essays
+case history
+case lifeSciences
+case physics
+case reference
+case agriculture
+case atmosphere
+case biology
+case ecology
+case environment
+case geography
+case geology
+case mathematics(Mathematics)
+
+var identifier: Int {
+switch self {
+case .scienceAndNature: return 9019
+case .nature: return 10088
+case .astronomy: return 10111
+case .chemistry: return 10112
+case .earthSciences: return 10113
+case .essays: return 10114
+case .history: return 10115
+case .lifeSciences: return 10116
+case .physics: return 10117
+case .reference: return 10118
+case .agriculture: return 11063
+case .atmosphere: return 11064
+case .biology: return 11065
+case .ecology: return 11066
+case .environment: return 11067
+case .geography: return 11068
+case .geology: return 11069
+}
+}
+
+var stringValue: String {
+switch self {
+case .scienceAndNature:return "Science & Nature"
+case .nature:return "Nature"
+case .astronomy:return "Astronomy"
+case .chemistry:return "Chemistry"
+case .earthSciences:return "Earth Sciences"
+case .essays:return "Essays"
+case .history:return "History"
+case .lifeSciences:return "Life Sciences"
+case .physics:return "Physics"
+case .reference:return "Reference"
+case .agriculture:return "Agriculture"
+case .atmosphere:return "Atmosphere"
+case .biology:return "Biology"
+case .ecology:return "Ecology"
+case .environment:return "Environment"
+case .geography:return "Geography"
+case .geology:return "Geology"
+}
+}
+
+enum Mathematics: Int, CaseIterable {
+case mathematics = 10085
+case advancedMathematics = 11295
+case algebra = 11296
+case arithmetic = 11297
+case calculus = 11298
+case geometry = 11299
+case statistics = 11300
+
+var stringValue: String {
+switch self {
+case .mathematics:return "Mathematics"
+case .advancedMathematics:return "Advanced Mathematics"
+case .algebra:return "Algebra"
+case .arithmetic:return "Arithmetic"
+case .calculus:return "Calculus"
+case .geometry:return "Geometry"
+case .statistics:return "Statistics"
+}
+}
+}
+}
+
+enum SciFiAndFantasy {
+case sciFiAndFantasy
+case scienceFiction
+case fantasy(Fantasy)
+case scienceFictionAndLiterature(ScienceFictionAndLiterature)
+
+var identifier: Int {
+switch self {
+case .sciFiAndFantasy: return 9020
+case .scienceFiction: 10063
+}
+}
+
+var stringValue: String {
+switch self {
+case .sciFiAndFantasy:return "Sci-Fi & Fantasy"
+case .scienceFiction:return "Science Fiction"
+}
+}
+
+enum Fantasy: Int, CaseIterable {
+case fantasy = 10044
+case contemporary = 11001
+case epic = 11002
+case historical = 11003
+case paranormal = 11004
+case shortStories = 11005
+case urban = 11275
+
+var stringValue: String {
+switch self {
+case .fantasy:return "Fantasy"
+case .contemporary:return "Contemporary"
+case .epic:return "Epic"
+case .historical:return "Historical"
+case .paranormal:return "Paranormal"
+case .shortStories:return "Short Stories"
+case .urban:return "Urban"
+}
+}
+
+enum ScienceFictionAndLiterature: Int, CaseIterable {
+case scienceFictionAndLiterature = 10064
+case adventure = 11006
+case highTech = 11007
+case shortStories = 11008
+
+var stringValue: String {
+switch self {
+case .scienceFictionAndLiterature:return "Science Fiction & Literature"
+case .adventure:return "Adventure"
+case .highTech:return "High Tech"
+case .shortStories:return "Short Stories"
+}
+}
+}
+}
+
+enum LifestyleAndHome: Int, CaseIterable {
+case lifestyleAndHome = 9024
+case antiquesAndCollectibles = 10001
+case craftsAndHobbies = 10034
+case gardening = 10068
+case pets = 10090
+
+var stringValue: String {
+switch self {
+case .lifestyleAndHome:return "Lifestyle & Home"
+case .antiquesAndCollectibles:return "Antiques & Collectibles"
+case .craftsAndHobbies:return "Crafts & Hobbies"
+case .gardening:return "Gardening"
+case .pets:return "Pets"
+}
+}
+}
+
+enum SelfDevelopment: Int, CaseIterable {
+case selfDevelopment = 9025
+case spirituality = 10004
+case healthAndFitness = 10069
+case psychology = 10094
+case selfImprovement = 10119
+case dietAndNutrition = 11062
+
+var stringValue: String {
+switch self {
+case .selfDevelopment:return "Self-Development"
+case .spirituality:return "Spirituality"
+case .healthAndFitness:return "Health & Fitness"
+case .psychology:return "Psychology"
+case .selfImprovement:return "Self-Improvement"
+case .dietAndNutrition:return "Diet & Nutrition"
+}
+}
+}
+
+enum ComicsAndGraphicNovels {
+case comicsAndGraphicNovels = 9026
+case graphicNovels = 10015
+case comics = 50000090
+
+var identifier: Int {
+switch self {
+case .comicsAndGraphicNovels: return 9026
+case .graphicNovels: return 10015
+case .comics: return 50000090
+}
+}
+
+var stringValue: String {
+switch self {
+case .comicsAndGraphicNovels:return "Comics & Graphic Novels"
+case .graphicNovels:return "Graphic Novels"
+case .comics:return "Comics"
+}
+}
+
+enum Manga: Int, CaseIterable {
+case manga = 10016
+case schoolDrama = 11051
+case humanDrama = 11052
+case familyDrama = 11053
+case boys = 11337
+case men = 11338
+case girls = 11339
+case women = 11340
+case other = 11341
+case yaoi = 11342
+case comicEssays = 11343
+case action = 50000071
+case comedy = 50000072
+case erotica = 50000073
+case fantasy = 50000074
+case fourCellManga = 50000075
+case gayAndLesbian = 50000076
+case hardBoiled = 50000077
+case heroes = 50000078
+case historicalFiction = 50000079
+case mecha = 50000080
+case mystery = 50000081
+case nonfiction = 50000082
+case religious = 50000083
+case romance = 50000084
+case romanticComedy = 50000085
+case scienceFiction = 50000086
+case sports = 50000087
+case horror = 50000089
+
+var stringValue: String {
+switch self {
+case .manga:return "Manga"
+case .schoolDrama:return "School Drama"
+case .humanDrama:return "Human Drama"
+case .familyDrama:return "Family Drama"
+case .boys:return "Boys"
+case .men:return "Men"
+case .girls:return "Girls"
+case .women:return "Women"
+case .other:return "Other"
+case .yaoi:return "Yaoi"
+case .comicEssays:return "Comic Essays"
+case .action:return "Action"
+case .comedy:return "Comedy"
+case .erotica:return "Erotica"
+case .fantasy:return "Fantasy"
+case .fourCellManga:return "Four Cell Manga"
+case .gayAndLesbian:return "Gay & Lesbian"
+case .hardBoiled:return "Hard-Boiled"
+case .heroes:return "Heroes"
+case .historicalFiction:return "Historical Fiction"
+case .mecha:return "Mecha"
+case .mystery:return "Mystery"
+case .nonfiction:return "Nonfiction"
+case .religious:return "Religious"
+case .romance:return "Romance"
+case .romanticComedy:return "Romantic Comedy"
+case .scienceFiction:return "Science Fiction"
+case .sports:return "Sports"
+case .horror:return "Horror"
+}
+}
+}
+}
+
+enum ComputersAndInternet: Int, CaseIterable {
+case computersAndInternet = 9027
+case computers = 10017
+case databases = 10018
+case digitalMedia = 10019
+case internet = 10020
+case network = 10021
+case operatingSystems = 10022
+case programming = 10023
+case software = 10024
+case systemAdministration = 10025
+
+var stringValue: String {
+switch self {
+case .computersAndInternet:return "Computers & Internet"
+case .computers:return "Computers"
+case .databases:return "Databases"
+case .digitalMedia:return "Digital Media"
+case .internet:return "Internet"
+case .network:return "Network"
+case .operatingSystems:return "Operating Systems"
+case .programming:return "Programming"
+case .software:return "Software"
+case .systemAdministration:return "System Administration"
+}
+}
+}
+
+enum CookbooksFoodAndWine: Int, CaseIterable {
+case cookbooksFoodAndWine = 9028
+case beverages = 10026
+case coursesAndDishes = 10027
+case specialDiet = 10028
+case specialOccasions = 10029
+case methods = 10030
+case reference = 10031
+case regionalAndEthnic = 10032
+case specificIngredients = 10033
+case culinaryArts = 11255
+
+var stringValue: String {
+switch self {
+case .cookbooksFoodAndWine:return "Cookbooks, Food & Wine"
+case .beverages:return "Beverages"
+case .coursesAndDishes:return "Courses & Dishes"
+case .specialDiet:return "Special Diet"
+case .specialOccasions:return "Special Occasions"
+case .methods:return "Methods"
+case .reference:return "Reference"
+case .regionalAndEthnic:return "Regional & Ethnic"
+case .specificIngredients:return "Specific Ingredients"
+case .culinaryArts:return "Culinary Arts"
+}
+}
+}
+
+enum ProfessionalAndTechnical {
+case professionalAndTechnical
+case design
+case law
+case education(Education)
+case medical(Medical)
+case engineering(Engineering)
+
+var identifier: Int {
+switch self {
+case .professionalAndTechnical: return 9029
+case .design: return 10035
+case .law: return 10083
+}
+}
+
+var stringValue: String {
+switch self {
+case .professionalAndTechnical:return "Professional & Technical"
+case .design:return "Design"
+case .law:return "Law"
+}
+}
+
+enum Education: Int, CaseIterable {
+case education = 10037
+case languageArtsAndDisciplines = 11009
+
+var stringValue: String {
+switch self {
+case .education:return "Education"
+case .languageArtsAndDisciplines:return "Language Arts & Disciplines"
+}
+}
+}
+
+enum Medical: Int, CaseIterable {
+case medical = 10086
+case veterinary = 11301
+case neuroscience = 11302
+case immunology = 11303
+case nursing = 11304
+case pharmacologyAndToxicology = 11305
+case anatomyAndPhysiology = 11306
+case dentistry = 11307
+case emergencyMedicine = 11308
+case genetics = 11309
+case psychiatry = 11310
+case radiology = 11311
+case alternativeMedicine = 11312
+
+var stringValue: String {
+switch self {
+case .medical:return "Medical"
+case .veterinary:return "Veterinary"
+case .neuroscience:return "Neuroscience"
+case .immunology:return "Immunology"
+case .nursing:return "Nursing"
+case .pharmacologyAndToxicology:return "Pharmacology & Toxicology"
+case .anatomyAndPhysiology:return "Anatomy & Physiology"
+case .dentistry:return "Dentistry"
+case .emergencyMedicine:return "Emergency Medicine"
+case .genetics:return "Genetics"
+case .psychiatry:return "Psychiatry"
+case .radiology:return "Radiology"
+case .alternativeMedicine:return "Alternative Medicine"
+}
+}
+}
+
+enum Engineering: Int, CaseIterable {
+case engineering = 10137
+case aeronautics = 11329
+case chemicalAndPetroleumEngineering = 11330
+case civilEngineering = 11331
+case computerScience = 11332
+case electricalEngineering = 11333
+case environmentalEngineering = 11334
+case mechanicalEngineering = 11335
+case powerResources = 11336
+
+var stringValue: String {
+switch self {
+case .engineering:return "Engineering"
+case .aeronautics:return "Aeronautics"
+case .chemicalAndPetroleumEngineering:return "Chemical & Petroleum Engineering"
+case .civilEngineering:return "Civil Engineering"
+case .computerScience:return "Computer Science"
+case .electricalEngineering:return "Electrical Engineering"
+case .environmentalEngineering:return "Environmental Engineering"
+case .mechanicalEngineering:return "Mechanical Engineering"
+case .powerResources:return "Power Resources"
+}
+}
+}
+}
+
+enum FictionAndLiterature: Int, CaseIterable {
+case fictionAndLiterature = 9031
+case actionAndAdventure = 10039
+case africanAmerican = 10040
+case religious = 10041
+case classics = 10042
+case erotica = 10043
+case gay = 10045
+case ghost = 10046
+case historical = 10047
+case horror = 10048
+case literary = 10049
+case shortStories = 10065
+case literaryCriticism = 10084
+case poetry = 10093
+case essays = 11044
+case anthologies = 11045
+case comparativeLiterature = 11046
+case drama = 11047
+case fairyTalesMythsAndFables = 11049
+case family = 11050
+case lightNovels = 50000088
+
+var stringValue: String {
+switch self {
+case .fictionAndLiterature:return "Fiction & Literature"
+case .actionAndAdventure:return "Action & Adventure"
+case .africanAmerican:return "African American"
+case .religious:return "Religious"
+case .classics:return "Classics"
+case .erotica:return "Erotica"
+case .gay:return "Gay"
+case .ghost:return "Ghost"
+case .historical:return "Historical"
+case .horror:return "Horror"
+case .literary:return "Literary"
+case .shortStories:return "Short Stories"
+case .literaryCriticism:return "Literary Criticism"
+case .poetry:return "Poetry"
+case .essays:return "Essays"
+case .anthologies:return "Anthologies"
+case .comparativeLiterature:return "Comparative Literature"
+case .drama:return "Drama"
+case .fairyTalesMythsAndFables:return "Fairy Tales, Myths & Fables"
+case .family:return "Family"
+case .lightNovels:return "Light Novels"
+}
+}
+}
+
+enum MysteriesAndThrillers: Int, CaseIterable {
+case mysteriesAndThrillers = 9032
+case hardBoiled = 10050
+case historical = 10051
+case policeProcedural = 10052
+case shortStories = 10053
+case britishDetectives = 10054
+case womenSleuths = 10055
+case cozy = 11259
+
+var stringValue: String {
+switch self {
+case .mysteriesAndThrillers:return "Mysteries & Thrillers"
+case .hardBoiled:return "Hard-Boiled"
+case .historical:return "Historical"
+case .policeProcedural:return "Police Procedural"
+case .shortStories:return "Short Stories"
+case .britishDetectives:return "British Detectives"
+case .womenSleuths:return "Women Sleuths"
+case .cozy:return "Cozy"
+}
+}
+}
+
+enum Reference {
+case reference
+case almanacsAndYearbooks
+case atlasesAndMaps
+case catalogsAndDirectories
+case consumerGuides
+case dictionariesAndThesauruses
+case encyclopedias
+case etiquette
+case quotations
+case wordsAndLanguage
+case writing
+case studyAids
+case manuals
+case foreignLanguages(ForeignLanguages)
+
+var identifier: Int {
+switch self {
+case .reference: return 9033
+case .almanacsAndYearbooks: return 10095
+case .atlasesAndMaps: return 10096
+case .catalogsAndDirectories: return 10097
+case .consumerGuides: return 10098
+case .dictionariesAndThesauruses: return 10099
+case .encyclopedias: return 10100
+case .etiquette: return 10101
+case .quotations: return 10102
+case .wordsAndLanguage: return 10103
+case .writing: return 10104
+case .studyAids: return 10136
+case .manuals: return 11085
+}
+}
+
+var stringValue: String {
+switch self {
+case .reference:return "Reference"
+case .almanacsAndYearbooks:return "Almanacs & Yearbooks"
+case .atlasesAndMaps:return "Atlases & Maps"
+case .catalogsAndDirectories:return "Catalogs & Directories"
+case .consumerGuides:return "Consumer Guides"
+case .dictionariesAndThesauruses:return "Dictionaries & Thesauruses"
+case .encyclopedias:return "Encyclopedias"
+case .etiquette:return "Etiquette"
+case .quotations:return "Quotations"
+case .wordsAndLanguage:return "Words & Language"
+case .writing:return "Writing"
+case .studyAids:return "Study Aids"
+case .manuals:return "Manuals"
+}
+}
+
+enum ForeignLanguages: Int, CaseIterable {
+case foreignLanguages = 10066
+case arabic = 11276
+case bilingualEditions = 11277
+case africanLanguages = 11278
+case ancientLanguages = 11279
+case chinese = 11280
+case english = 11281
+case french = 11282
+case german = 11283
+case hebrew = 11284
+case hindi = 11285
+case italian = 11286
+case japanese = 11287
+case korean = 11288
+case linguistics = 11289
+case otherLanguages = 11290
+case portuguese = 11291
+case russian = 11292
+case spanish = 11293
+case speechPathology = 11294
+
+var stringValue: String {
+switch self {
+case .foreignLanguages:return "Foreign Languages"
+case .arabic:return "Arabic"
+case .bilingualEditions:return "Bilingual Editions"
+case .africanLanguages:return "African Languages"
+case .ancientLanguages:return "Ancient Languages"
+case .chinese:return "Chinese"
+case .english:return "English"
+case .french:return "French"
+case .german:return "German"
+case .hebrew:return "Hebrew"
+case .hindi:return "Hindi"
+case .italian:return "Italian"
+case .japanese:return "Japanese"
+case .korean:return "Korean"
+case .linguistics:return "Linguistics"
+case .otherLanguages:return "Other Languages"
+case .portuguese:return "Portuguese"
+case .russian:return "Russian"
+case .spanish:return "Spanish"
+case .speechPathology:return "Speech Pathology"
+}
+}
+}
+}
+
+enum PoliticsAndCurrentEvents: Int, CaseIterable {
+case politicsAndCurrentEvents = 9034
+case currentEvents = 11260
+case foreignPolicyAndInternationalRelations = 11261
+case localGovernment = 11262
+case nationalGovernment = 11263
+case politicalScience = 11264
+case publicAdministration = 11265
+case worldAffairs = 11266
+
+var stringValue: String {
+switch self {
+case .politicsAndCurrentEvents:return "Politics & Current Events"
+case .currentEvents:return "Current Events"
+case .foreignPolicyAndInternationalRelations:return "Foreign Policy & International Relations"
+case .localGovernment:return "Local Government"
+case .nationalGovernment:return "National Government"
+case .politicalScience:return "Political Science"
+case .publicAdministration:return "Public Administration"
+case .worldAffairs:return "World Affairs"
+}
+}
+}
+
+enum SportsAndOutdoors: Int, CaseIterable {
+case sportsAndOutdoors = 9035
+case baseball = 10121
+case basketball = 10122
+case coaching = 10123
+case extremeSports = 10124
+case football = 10125
+case golf = 10126
+case hockey = 10127
+case mountaineering = 10128
+case outdoors = 10129
+case racketSports = 10130
+case reference = 10131
+case soccer = 10132
+case training = 10133
+case waterSports = 10134
+case winterSports = 10135
+case boxing = 11054
+case cricket = 11055
+case cycling = 11056
+case equestrian = 11057
+case martialArtsAndSelfDefense = 11058
+case motorSports = 11059
+case rugby = 11060
+case running = 11061
+
+var stringValue: String {
+switch self {
+case .sportsAndOutdoors:return "Sports & Outdoors"
+case .baseball:return "Baseball"
+case .basketball:return "Basketball"
+case .coaching:return "Coaching"
+case .extremeSports:return "Extreme Sports"
+case .football:return "Football"
+case .golf:return "Golf"
+case .hockey:return "Hockey"
+case .mountaineering:return "Mountaineering"
+case .outdoors:return "Outdoors"
+case .racketSports:return "Racket Sports"
+case .reference:return "Reference"
+case .soccer:return "Soccer"
+case .training:return "Training"
+case .waterSports:return "Water Sports"
+case .winterSports:return "Winter Sports"
+case .boxing:return "Boxing"
+case .cricket:return "Cricket"
+case .cycling:return "Cycling"
+case .equestrian:return "Equestrian"
+case .martialArtsAndSelfDefense:return "Martial Arts & Self Defense"
+case .motorSports:return "Motor Sports"
+case .rugby:return "Rugby"
+case .running:return "Running"
+}
+}
+}
+
+enum CommunicationsAndMedia: Int, CaseIterable {
+case communicationsAndMedia = 11010
+case broadcasting = 11011
+case digitalMedia = 11012
+case journalism = 11013
+case photojournalism = 11014
+case print = 11015
+case speech = 11016
+case writing = 11017
+case communicationsAndMedia = 11227
+
+var stringValue: String {
+switch self {
+case .communicationsAndMedia:return "Communications & Media"
+case .broadcasting:return "Broadcasting"
+case .digitalMedia:return "Digital Media"
+case .journalism:return "Journalism"
+case .photojournalism:return "Photojournalism"
+case .print:return "Print"
+case .speech:return "Speech"
+case .writing:return "Writing"
+case .communicationsAndMedia:return "Communications & Media"
+}
+}
+}
+
+enum Kids {
+case kids = 11086
+case animals = 11087
+case biography = 11102
+case careersAndOccupations = 11103
+case computersAndTechnology = 11104
+case cookingAndFood = 11105
+case family = 11111
+case gamesAndActivities = 11132
+case generalNonfiction = 11133
+case health = 11134
+case history = 11135
+case poetry = 11151
+case nurseryRhymes = 11156
+case government = 11157
+case reference = 11158
+case religion = 11159
+case scienceAndNature = 11160
+case socialIssues = 11161
+case socialStudies = 11162
+case sportsAndRecreation = 11163
+case transportation = 11164
+case artsAndEntertainment(ArtsAndEntertainment)
+case basicConcepts(BasicConcepts)
+case fiction(Fiction)
+case holidaysAndCelebrations(HolidaysAndCelebrations)
+case humor(Humor)
+case learningToRead(LearningToRead)
+
+var identifier: Int {
+switch self {
+case .kids: return 11086
+case .animals: return 11087
+case .biography: return 11102
+case .careersAndOccupations: return 11103
+case .computersAndTechnology: return 11104
+case .cookingAndFood: return 11105
+case .family: return 11111
+case .gamesAndActivities: return 11132
+case .generalNonfiction: return 11133
+case .health: return 11134
+case .history: return 11135
+case .poetry: return 11151
+case .nurseryRhymes: return 11156
+case .government: return 11157
+case .reference: return 11158
+case .religion: return 11159
+case .scienceAndNature: return 11160
+case .socialIssues: return 11161
+case .socialStudies: return 11162
+case .sportsAndRecreation: return 11163
+case .transportation: return 11164
+}
+}
+
+var stringValue: String {
+switch self {
+case .kids:return "Kids"
+case .animals:return "Animals"
+case .biography:return "Biography"
+case .careersAndOccupations:return "Careers & Occupations"
+case .computersAndTechnology:return "Computers & Technology"
+case .cookingAndFood:return "Cooking & Food"
+case .family:return "Family"
+case .gamesAndActivities:return "Games & Activities"
+case .generalNonfiction:return "General Nonfiction"
+case .health:return "Health"
+case .history:return "History"
+case .poetry:return "Poetry"
+case .nurseryRhymes:return "Nursery Rhymes"
+case .government:return "Government"
+case .reference:return "Reference"
+case .religion:return "Religion"
+case .scienceAndNature:return "Science & Nature"
+case .socialIssues:return "Social Issues"
+case .socialStudies:return "Social Studies"
+case .sportsAndRecreation:return "Sports & Recreation"
+case .transportation:return "Transportation"
+}
+}
+
+enum BasicConcepts: Int, CaseIterable {
+case basicConcepts = 11088
+case alphabet = 11089
+case body = 11090
+case colors = 11091
+case countingAndNumbers = 11092
+case dateAndTime = 11093
+case general = 11094
+case money = 11095
+case opposites = 11096
+case seasons = 11097
+case sensesAndSensation = 11098
+case sizeAndShape = 11099
+case sounds = 11100
+case words = 11101
+
+var stringValue: String {
+switch self {
+case .basicConcepts:return "Basic Concepts"
+case .alphabet:return "Alphabet"
+case .body:return "Body"
+case .colors:return "Colors"
+case .countingAndNumbers:return "Counting & Numbers"
+case .dateAndTime:return "Date & Time"
+case .general:return "General"
+case .money:return "Money"
+case .opposites:return "Opposites"
+case .seasons:return "Seasons"
+case .sensesAndSensation:return "Senses & Sensation"
+case .sizeAndShape:return "Size & Shape"
+case .sounds:return "Sounds"
+case .words:return "Words"
+}
+}
+}
+
+enum ArtsAndEntertainment: Int, CaseIterable {
+case artsAndEntertainment = 11106
+case art = 11107
+case crafts = 11108
+case music = 11109
+case performingArts = 11110
+
+var stringValue: String {
+switch self {
+case .artsAndEntertainment:return "Arts & Entertainment"
+case .art:return "Art"
+case .crafts:return "Crafts"
+case .music:return "Music"
+case .performingArts:return "Performing Arts"
+}
+}
+}
+
+enum Fiction: Int, CaseIterable {
+case fiction = 11112
+case actionAndAdventure = 11113
+case animals = 11114
+case classics = 11115
+case comicsAndGraphicNovels = 11116
+case culture,PlacesAndPeople = 11117
+case familyAndRelationships = 11118
+case fantasy = 11119
+case fairyTales,MythsAndFables = 11120
+case favoriteCharacters = 11121
+case historical = 11122
+case holidaysAndCelebrations = 11123
+case monstersAndGhosts = 11124
+case mysteries = 11125
+case nature = 11126
+case religion = 11127
+case sciFi = 11128
+case socialIssues = 11129
+case sportsAndRecreation = 11130
+case transportation = 11131
+
+var stringValue: String {
+switch self {
+case .fiction:return "Fiction"
+case .actionAndAdventure:return "Action & Adventure"
+case .animals:return "Animals"
+case .classics:return "Classics"
+case .comicsAndGraphicNovels:return "Comics & Graphic Novels"
+case .culture,PlacesAndPeople:return "Culture, Places & People"
+case .familyAndRelationships:return "Family & Relationships"
+case .fantasy:return "Fantasy"
+case .fairyTales,MythsAndFables:return "Fairy Tales, Myths & Fables"
+case .favoriteCharacters:return "Favorite Characters"
+case .historical:return "Historical"
+case .holidaysAndCelebrations:return "Holidays & Celebrations"
+case .monstersAndGhosts:return "Monsters & Ghosts"
+case .mysteries:return "Mysteries"
+case .nature:return "Nature"
+case .religion:return "Religion"
+case .sciFi:return "Sci-Fi"
+case .socialIssues:return "Social Issues"
+case .sportsAndRecreation:return "Sports & Recreation"
+case .transportation:return "Transportation"
+}
+}
+}
+
+enum HolidaysAndCelebrations: Int, CaseIterable {
+case holidaysAndCelebrations = 11136
+case birthdays = 11137
+case christmasAndAdvent = 11138
+case easterAndLent = 11139
+case general = 11140
+case halloween = 11141
+case hanukkah = 11142
+case other = 11143
+case passover = 11144
+case patrioticHolidays = 11145
+case ramadan = 11146
+case thanksgiving = 11147
+case valentinesDay = 11148
+
+var stringValue: String {
+switch self {
+case .holidaysAndCelebrations:return "Holidays & Celebrations"
+case .birthdays:return "Birthdays"
+case .christmasAndAdvent:return "Christmas & Advent"
+case .easterAndLent:return "Easter & Lent"
+case .general:return "General"
+case .halloween:return "Halloween"
+case .hanukkah:return "Hanukkah"
+case .other:return "Other"
+case .passover:return "Passover"
+case .patrioticHolidays:return "Patriotic Holidays"
+case .ramadan:return "Ramadan"
+case .thanksgiving:return "Thanksgiving"
+case .valentinesDay:return "Valentine's Day"
+}
+}
+}
+
+enum Humor: Int, CaseIterable {
+case humor = 11149
+case jokesAndRiddles = 11150
+
+var stringValue: String {
+switch self {
+case .humor:return "Humor"
+case .jokesAndRiddles:return "Jokes & Riddles"
+}
+}
+}
+
+enum LearningToRead: Int, CaseIterable {
+case learningtoRead = 11152
+case chapterBooks = 11153
+case earlyReaders = 11154
+case intermediateReaders = 11155
+
+var stringValue: String {
+switch self {
+case .learningtoRead:return "Learning to Read"
+case .chapterBooks:return "Chapter Books"
+case .earlyReaders:return "Early Readers"
+case .intermediateReaders:return "Intermediate Readers"
+}
+}
+}
+}
+
+enum YoungAdult {
+case youngAdult
+case animals
+case biography
+case careersAndOccupations
+case computersAndTechnology
+case cookingAndFood
+case family
+case gamesAndActivities
+case generalNonfiction
+case health
+case history
+case poetry
+case politicsAndGovernment
+case reference
+case religion
+case scienceAndNature
+case comingOfAge
+case socialStudies
+case sportsAndRecreation
+case transportation
+case artsAndEntertainment(ArtsAndEntertainment)
+case fiction(Fiction)
+case holidaysAndCelebrations(HolidaysAndCelebrations)
+case humor(Humor)
+
+var identifier: Int {
+switch self {
+case .youngAdult: return 11165
+case .animals: return 11166
+case .biography: return 11167
+case .careersAndOccupations: return 11168
+case .computersAndTechnology: return 11169
+case .cookingAndFood: return 11170
+case .family: return 11176
+case .gamesAndActivities: return 11199
+case .generalNonfiction: return 11200
+case .health: return 11201
+case .history: return 11202
+case .poetry: return 11218
+case .politicsAndGovernment: return 11219
+case .reference: return 11220
+case .religion: return 11221
+case .scienceAndNature: return 11222
+case .comingOfAge: return 11223
+case .socialStudies: return 11224
+case .sportsAndRecreation: return 11225
+case .transportation: return 11226
+}
+}
+
+var stringValue: String {
+switch self {
+case .youngAdult:return "Young Adult"
+case .animals:return "Animals"
+case .biography:return "Biography"
+case .careersAndOccupations:return "Careers & Occupations"
+case .computersAndTechnology:return "Computers & Technology"
+case .cookingAndFood:return "Cooking & Food"
+case .family:return "Family"
+case .gamesAndActivities:return "Games & Activities"
+case .generalNonfiction:return "General Nonfiction"
+case .health:return "Health"
+case .history:return "History"
+case .poetry:return "Poetry"
+case .politicsAndGovernment:return "Politics & Government"
+case .reference:return "Reference"
+case .religion:return "Religion"
+case .scienceAndNature:return "Science & Nature"
+case .comingOfAge:return "Coming of Age"
+case .socialStudies:return "Social Studies"
+case .sportsAndRecreation:return "Sports & Recreation"
+case .transportation:return "Transportation"
+}
+}
+
+enum ArtsAndEntertainment: Int, CaseIterable {
+case artsAndEntertainment = 11171
+case art = 11172
+case crafts = 11173
+case music = 11174
+case performingArts = 11175
+
+var stringValue: String {
+switch self {
+case .artsAndEntertainment:return "Arts & Entertainment"
+case .art:return "Art"
+case .crafts:return "Crafts"
+case .music:return "Music"
+case .performingArts:return "Performing Arts"
+}
+}
+}
+
+enum Fiction: Int, CaseIterable {
+case fiction = 11177
+case actionAndAdventure = 11178
+case animals = 11179
+case classics = 11180
+case comicsAndGraphicNovels = 11181
+case culturePlacesAndPeople = 11182
+case dystopian = 11183
+case familyAndRelationships = 11184
+case fantasy = 11185
+case fairyTalesMythsAndFables = 11186
+case favoriteCharacters = 11187
+case historical = 11188
+case holidaysAndCelebrations = 11189
+case horror,MonstersAndGhosts = 11190
+case crimeAndMystery = 11191
+case nature = 11192
+case religion = 11193
+case romance = 11194
+case sciFi = 11195
+case comingOfAge = 11196
+case sportsAndRecreation = 11197
+case transportation = 11198
+
+var stringValue: String {
+switch self {
+case .fiction:return "Fiction"
+case .actionAndAdventure:return "Action & Adventure"
+case .animals:return "Animals"
+case .classics:return "Classics"
+case .comicsAndGraphicNovels:return "Comics & Graphic Novels"
+case .culturePlacesAndPeople:return "Culture, Places & People"
+case .dystopian:return "Dystopian"
+case .familyAndRelationships:return "Family & Relationships"
+case .fantasy:return "Fantasy"
+case .fairyTalesMythsAndFables:return "Fairy Tales, Myths & Fables"
+case .favoriteCharacters:return "Favorite Characters"
+case .historical:return "Historical"
+case .holidaysAndCelebrations:return "Holidays & Celebrations"
+case .horror,MonstersAndGhosts:return "Horror, Monsters & Ghosts"
+case .crimeAndMystery:return "Crime & Mystery"
+case .nature:return "Nature"
+case .religion:return "Religion"
+case .romance:return "Romance"
+case .sciFi:return "Sci-Fi"
+case .comingOfAge:return "Coming of Age"
+case .sportsAndRecreation:return "Sports & Recreation"
+case .transportation:return "Transportation"
+}
+}
+}
+
+enum HolidaysAndCelebrations: Int, CaseIterable {
+case holidaysAndCelebrations = 11203
+case birthdays = 11204
+case christmasAndAdvent = 11205
+case easterAndLent = 11206
+case general = 11207
+case halloween = 11208
+case hanukkah = 11209
+case other = 11210
+case passover = 11211
+case patrioticHolidays = 11212
+case ramadan = 11213
+case thanksgiving = 11214
+case valentinesDay = 11215
+
+var stringValue: String {
+switch self {
+case .holidaysAndCelebrations:return "Holidays & Celebrations"
+case .birthdays:return "Birthdays"
+case .christmasAndAdvent:return "Christmas & Advent"
+case .easterAndLent:return "Easter & Lent"
+case .general:return "General"
+case .halloween:return "Halloween"
+case .hanukkah:return "Hanukkah"
+case .other:return "Other"
+case .passover:return "Passover"
+case .patrioticHolidays:return "Patriotic Holidays"
+case .ramadan:return "Ramadan"
+case .thanksgiving:return "Thanksgiving"
+case .valentinesDay:return "Valentine's Day"
+}
+}
+}
+
+enum Humor: Int, CaseIterable {
+case humor = 11216
+case jokesAndRiddles = 11217
+
+var stringValue: String {
+switch self {
+case .humor:return "Humor"
+case .jokesAndRiddles:return "Jokes & Riddles"
+}
+}
+}
+}
+}

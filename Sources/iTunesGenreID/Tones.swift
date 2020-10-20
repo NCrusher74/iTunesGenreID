@@ -6,16 +6,22 @@
 //
 
 import Foundation
-enum Tones {
+enum Tones: CaseIterable {
     case tones
     case alertTones(AlertTones)
-    case ringtomes(Ringtones)
+    case ringtones(Ringtones)
     
+    static var allCases: [Tones] {
+        var array: [Tones] = [.tones]
+        array.append(contentsOf: AlertTones.allCases.map({Tones.alertTones($0)}))
+        array.append(contentsOf: Ringtones.allCases.map({Tones.ringtones($0)}))
+        return array
+    }
     var identifier: Int {
         switch self {
             case .tones: return 37
             case .alertTones(let genre): return genre.rawValue
-            case .ringtomes(let genre): return genre.identifier
+            case .ringtones(let genre): return genre.identifier
         }
     }
     
@@ -23,7 +29,7 @@ enum Tones {
         switch self {
             case .tones: return "Tones"
             case .alertTones(let genre): return genre.stringValue
-            case .ringtomes(let genre):
+            case .ringtones(let genre):
                 switch genre {
                     case .ringtones: return genre.stringValue
                     default: return "\(Ringtones.ringtones.stringValue)|\(genre.stringValue)"
