@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum MusicVideos: CaseIterable {
+public enum MusicVideos: CaseIterable {
     case musicVideos
     case podcasts
     case enka
@@ -112,7 +112,7 @@ enum MusicVideos: CaseIterable {
         return array
     }
 
-    var identifier: Int {
+    public var identifier: Int {
         switch self {
             case .musicVideos: return 31
             case .podcasts: return 1626
@@ -167,7 +167,7 @@ enum MusicVideos: CaseIterable {
         }
     }
     
-    var stringValue: String {
+    public var stringValue: String {
         switch self {
             case .musicVideos: return "MusicVideos"
             case .podcasts: return "Podcasts"
@@ -358,7 +358,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Alternative: Int, CaseIterable {
+    public enum Alternative: Int, CaseIterable {
         case alternative = 1620
         case chineseAlt = 1635
         case collegeRock = 1731
@@ -376,7 +376,7 @@ enum MusicVideos: CaseIterable {
         case indieEgyptian = 2025
         case indieMaghreb = 2026
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .alternative: return "Alternative"
                 case .chineseAlt: return "Chinese Alt"
@@ -398,7 +398,7 @@ enum MusicVideos: CaseIterable {
         }
     }
     
-    enum Blues: Int, CaseIterable {
+    public enum Blues: Int, CaseIterable {
         case blues = 1602
         case acousticBlues = 1737
         case chicagoBlues = 1738
@@ -408,7 +408,7 @@ enum MusicVideos: CaseIterable {
         case deltaBlues = 1742
         case electricBlues = 1743
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .blues: return "Blues"
                 case .acousticBlues: return "Acoustic Blues"
@@ -422,13 +422,13 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum ChildrensMusic: Int, CaseIterable {
+    public enum ChildrensMusic: Int, CaseIterable {
         case childrensMusic = 1604
         case lullabies = 1744
         case singAlong = 1745
         case stories = 1746
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .childrensMusic: return "Children's Music"
                 case .lullabies: return "Lullabies"
@@ -438,7 +438,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Classical: Int, CaseIterable {
+    public enum Classical: Int, CaseIterable {
         case classical = 1605
         case opera = 1609
         case avantGarde = 1758
@@ -471,7 +471,7 @@ enum MusicVideos: CaseIterable {
         case cello = 1939
         case percussion = 1940
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .classical: return "Classical"
                 case .opera: return "Opera"
@@ -508,12 +508,12 @@ enum MusicVideos: CaseIterable {
         }
     }
     
-    enum Comedy: Int, CaseIterable {
+    public enum Comedy: Int, CaseIterable {
         case comedy = 1603
         case novelty = 1773
         case standupComedy = 1774
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .comedy: return "Comedy"
                 case .novelty: return "Novelty"
@@ -522,7 +522,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Country: Int, CaseIterable {
+    public enum Country: Int, CaseIterable {
         case country = 1606
         case alternativeCountry = 1775
         case americana = 1776
@@ -537,7 +537,7 @@ enum MusicVideos: CaseIterable {
         case traditionalCountry = 1784
         case urbanCowboy = 1785
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .country: return "Country"
                 case .alternativeCountry: return "Alternative Country"
@@ -556,7 +556,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Dance: Int, CaseIterable {
+    public enum Dance: Int, CaseIterable {
         case dance = 1617
         case breakbeat = 1786
         case exercise = 1787
@@ -568,7 +568,7 @@ enum MusicVideos: CaseIterable {
         case trance = 1793
         case maghrebDance = 2032
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .dance: return "Dance"
                 case .breakbeat: return "Breakbeat"
@@ -584,7 +584,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Electronic: Int, CaseIterable {
+    public enum Electronic: Int, CaseIterable {
         case electronic = 1607
         case ambient = 1796
         case downtempo = 1797
@@ -597,7 +597,7 @@ enum MusicVideos: CaseIterable {
         case electroChaabi = 2028
         case maghrebElectronic = 2029
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .electronic: return "Electronic"
                 case .ambient: return "Ambient"
@@ -614,7 +614,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum HipHopAndRap: Int, CaseIterable {
+    public enum HipHopAndRap: Int, CaseIterable {
         case hipHopAndRap = 1618
         case alternativeRap = 1801
         case chineseHipHop = 1646
@@ -636,7 +636,7 @@ enum MusicVideos: CaseIterable {
         case maghrebHipHop = 2022
         case khaleejiHipHop = 2023
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .hipHopAndRap: return "Hip-Hop/Rap"
                 case .alternativeRap: return "Alternative Rap"
@@ -662,7 +662,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Holiday: CaseIterable {
+    public enum Holiday: CaseIterable {
         case holiday
         case chanukah
         case easter
@@ -680,7 +680,7 @@ enum MusicVideos: CaseIterable {
             return array
         }
 
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .holiday: return 1608
                 case .chanukah: return 1812
@@ -691,7 +691,7 @@ enum MusicVideos: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .holiday: return "Holiday"
                 case .chanukah: return "Chanukah"
@@ -706,7 +706,7 @@ enum MusicVideos: CaseIterable {
             }
         }
 
-        enum Christmas: Int, CaseIterable {
+        public enum Christmas: Int, CaseIterable {
             case christmas = 1813
             case childrens = 1814
             case classic = 1815
@@ -718,7 +718,7 @@ enum MusicVideos: CaseIterable {
             case religious = 1821
             case rock = 1822
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .christmas: return "Christmas"
                     case .childrens: return "Children's"
@@ -735,7 +735,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Jazz: Int, CaseIterable {
+    public enum Jazz: Int, CaseIterable {
         case jazz = 1611
         case avantGardeJazz = 1826
         case bigBand = 1685
@@ -753,7 +753,7 @@ enum MusicVideos: CaseIterable {
         case tradJazz = 1839
         case vocalJazz = 1902
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .jazz: return "Jazz"
                 case .avantGardeJazz: return "Avant-Garde Jazz"
@@ -775,7 +775,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Latin: Int, CaseIterable {
+    public enum Latin: Int, CaseIterable {
         case latin = 1612
         case alternativeAndRockinSpanish = 1840
         case baladasyBoleros = 1841
@@ -787,7 +787,7 @@ enum MusicVideos: CaseIterable {
         case musicaMexicana = 1847
         case salsayTropical = 1848
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .latin: return "Latin"
                 case .alternativeAndRockinSpanish: return "Alternative & Rock in Spanish"
@@ -803,7 +803,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum NewAge: Int, CaseIterable {
+    public enum NewAge: Int, CaseIterable {
         case newAge = 1613
         case healing = 1849
         case meditation = 1850
@@ -812,7 +812,7 @@ enum MusicVideos: CaseIterable {
         case travel = 1853
         case yoga = 1948
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .newAge: return "New Age"
                 case .healing: return "Healing"
@@ -825,7 +825,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Pop: Int, CaseIterable {
+    public enum Pop: Int, CaseIterable {
         case pop = 1614
         case kPop = 1686
         case adultContemporary = 1854
@@ -854,7 +854,7 @@ enum MusicVideos: CaseIterable {
         case maghrebPop = 2018
         case khaleejiPop = 2019
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .pop: return "Pop"
                 case .kPop: return "K-Pop"
@@ -887,7 +887,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum RandBSoul: Int, CaseIterable {
+    public enum RandBSoul: Int, CaseIterable {
         case rAndBSoul = 1615
         case contemporaryRandB = 1859
         case disco = 1860
@@ -897,7 +897,7 @@ enum MusicVideos: CaseIterable {
         case neoSoul = 1864
         case soul = 1865
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .rAndBSoul: return "R&B/Soul"
                 case .contemporaryRandB: return "Contemporary R&B"
@@ -911,7 +911,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Reggae: Int, CaseIterable {
+    public enum Reggae: Int, CaseIterable {
         case reggae = 1624
         case modernDancehall = 1866
         case dub = 1867
@@ -919,7 +919,7 @@ enum MusicVideos: CaseIterable {
         case ska = 1869
         case loversRock = 1944
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .reggae: return "Reggae"
                 case .modernDancehall: return "Modern Dancehall"
@@ -931,7 +931,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Rock: Int, CaseIterable {
+    public enum Rock: Int, CaseIterable {
         case rock = 1621
         case adultAlternative = 1870
         case americanTradRock = 1871
@@ -957,7 +957,7 @@ enum MusicVideos: CaseIterable {
         case texMex = 1888
         case turkishRock = 1997
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .rock: return "Rock"
                 case .adultAlternative: return "Adult Alternative"
@@ -987,7 +987,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum SingerSongwriter: Int, CaseIterable {
+    public enum SingerSongwriter: Int, CaseIterable {
         case singerSongwriter = 1610
         case alternativeFolk = 1889
         case contemporaryFolk = 1890
@@ -996,7 +996,7 @@ enum MusicVideos: CaseIterable {
         case newAcoustic = 1893
         case traditionalFolk = 1894
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .singerSongwriter: return "Singer/Songwriter"
                 case .alternativeFolk: return "Alternative Folk"
@@ -1009,7 +1009,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Soundtrack: Int, CaseIterable {
+    public enum Soundtrack: Int, CaseIterable {
         case soundtrack = 1616
         case foreignCinema = 1895
         case musicals = 1896
@@ -1018,7 +1018,7 @@ enum MusicVideos: CaseIterable {
         case tvSoundtrack = 1899
         case videoGame = 1959
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .soundtrack: return "Soundtrack"
                 case .foreignCinema: return "Foreign Cinema"
@@ -1031,14 +1031,14 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Vocal: Int, CaseIterable {
+    public enum Vocal: Int, CaseIterable {
         case vocal = 1623
         case standards = 1900
         case traditionalPop = 1901
         case trot = 1666
         case vocalPop = 1903
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .vocal: return "Vocal"
                 case .standards: return "Standards"
@@ -1049,7 +1049,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum World: Int, CaseIterable {
+    public enum World: Int, CaseIterable {
         case world = 1619
         case asia = 1907
         case australia = 1908
@@ -1082,7 +1082,7 @@ enum MusicVideos: CaseIterable {
         case worldbeat = 1924
         case zydeco = 1925
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .world: return "World"
                 case .asia: return "Asia"
@@ -1119,7 +1119,7 @@ enum MusicVideos: CaseIterable {
         }
     }
     
-    enum Arabic: CaseIterable {
+    public enum Arabic: CaseIterable {
         case arabic
         case arabicPop
         case islamic
@@ -1139,7 +1139,7 @@ enum MusicVideos: CaseIterable {
             return array
         }
 
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .arabic: return 1713
                 case .arabicPop: return 1716
@@ -1151,7 +1151,7 @@ enum MusicVideos: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .arabic: return "Arabic"
                 case .arabicPop: return "Arabic Pop"
@@ -1171,12 +1171,12 @@ enum MusicVideos: CaseIterable {
             }
         }
 
-        enum Khaleeji: Int, CaseIterable {
+        public enum Khaleeji: Int, CaseIterable {
             case khaleeji = 1714
             case khaleejiJalsat = 2009
             case khaleejiShailat = 2010
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .khaleeji: return "Khaleeji"
                     case .khaleejiJalsat: return "Khaleeji Jalsat"
@@ -1185,11 +1185,11 @@ enum MusicVideos: CaseIterable {
             }
         }
 
-        enum Levant: Int, CaseIterable {
+        public enum Levant: Int, CaseIterable {
             case levant = 2006
             case dabke = 2007
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .levant: return "Levant"
                     case .dabke: return "Dabke"
@@ -1198,7 +1198,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Brazilian: Int, CaseIterable {
+    public enum Brazilian: Int, CaseIterable {
         case brazilian = 1671
         case axe = 1672
         case baileFunk = 1673
@@ -1211,7 +1211,7 @@ enum MusicVideos: CaseIterable {
         case samba = 1680
         case sertanejo = 1681
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .brazilian: return "Brazilian"
                 case .axe: return "Axe"
@@ -1228,7 +1228,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Chinese: Int, CaseIterable {
+    public enum Chinese: Int, CaseIterable {
         case chinese = 1637
         case chineseClassical = 1638
         case chineseFlute = 1639
@@ -1239,7 +1239,7 @@ enum MusicVideos: CaseIterable {
         case taiwaneseFolk = 1644
         case tibetanNativeMusic = 1645
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .chinese: return "Chinese"
                 case .chineseClassical: return "Chinese Classical"
@@ -1254,7 +1254,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum ChristianAndGospel: Int, CaseIterable {
+    public enum ChristianAndGospel: Int, CaseIterable {
         case christianAndGospel = 1622
         case ccm = 1747
         case christianMetal = 1748
@@ -1268,7 +1268,7 @@ enum MusicVideos: CaseIterable {
         case southernGospel = 1756
         case traditionalGospel = 1757
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .christianAndGospel: return "Christian & Gospel"
                 case .ccm: return "CCM"
@@ -1286,12 +1286,12 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum EasyListening: Int, CaseIterable {
+    public enum EasyListening: Int, CaseIterable {
         case easyListening = 1625
         case lounge = 1794
         case swing = 1795
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .easyListening: return "Easy Listening"
                 case .lounge: return "Lounge"
@@ -1300,12 +1300,12 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Folk: Int, CaseIterable {
+    public enum Folk: Int, CaseIterable {
         case folk = 1719
         case iraqiFolk = 2030
         case khaleejiFolk = 2031
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .folk: return "Folk"
                 case .iraqiFolk: return "Iraqi Folk"
@@ -1314,7 +1314,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Indian: CaseIterable {
+    public enum Indian: CaseIterable {
         case indian
         case bollywood
         case devotionalAndSpiritual
@@ -1339,7 +1339,7 @@ enum MusicVideos: CaseIterable {
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .indian: return 1690
                 case .bollywood: return 1691
@@ -1353,7 +1353,7 @@ enum MusicVideos: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .indian: return "Indian"
                 case .bollywood: return "Bollywood"
@@ -1375,7 +1375,7 @@ enum MusicVideos: CaseIterable {
             }
         }
         
-        enum RegionalIndian: CaseIterable {
+        public enum RegionalIndian: CaseIterable {
             case regionalIndian
             case tamil
             case telugu
@@ -1412,7 +1412,7 @@ enum MusicVideos: CaseIterable {
                 return array
             }
 
-            var identifier: Int {
+            public var identifier: Int {
                 switch self {
                     case .regionalIndian: return 1694
                     case .tamil: return 1692
@@ -1432,7 +1432,7 @@ enum MusicVideos: CaseIterable {
                 }
             }
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .regionalIndian: return "Regional Indian"
                     case .tamil: return "Tamil"
@@ -1460,11 +1460,11 @@ enum MusicVideos: CaseIterable {
                 }
             }
 
-            enum Punjabi: Int, CaseIterable {
+            public enum Punjabi: Int, CaseIterable {
                 case punjabi = 1972
                 case punjabiPop = 1960
                 
-                var stringValue: String {
+                public var stringValue: String {
                     switch self {
                         case .punjabi: return "Punjabi"
                         case .punjabiPop: return "Punjabi Pop"
@@ -1472,11 +1472,11 @@ enum MusicVideos: CaseIterable {
                 }
             }
 
-            enum Bengali: Int, CaseIterable {
+            public enum Bengali: Int, CaseIterable {
                 case bengali = 1973
                 case rabindraSangeet = 1961
                 
-                var stringValue: String {
+                public var stringValue: String {
                     switch self {
                         case .bengali: return "Bengali"
                         case .rabindraSangeet: return "Rabindra Sangeet"
@@ -1485,12 +1485,12 @@ enum MusicVideos: CaseIterable {
             }
         }
 
-        enum IndianClassical: Int, CaseIterable {
+        public enum IndianClassical: Int, CaseIterable {
             case indianClassical = 1697
             case carnaticClassical = 1974
             case hindustaniClassical = 1975
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .indianClassical: return "Indian Classical"
                     case .carnaticClassical: return "Carnatic Classical"
@@ -1500,14 +1500,14 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Korean: Int, CaseIterable {
+    public enum Korean: Int, CaseIterable {
         case korean = 1648
         case koreanClassical = 1649
         case koreanTradInstrumental = 1651
         case koreanTradSong = 1650
         case koreanTradTheater = 1652
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .korean: return "Korean"
                 case .koreanClassical: return "Korean Classical"
@@ -1518,7 +1518,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum African: Int, CaseIterable {
+    public enum African: Int, CaseIterable {
         case african = 1904
         case afrikaans = 1710
         case afroBeat = 1905
@@ -1542,7 +1542,7 @@ enum MusicVideos: CaseIterable {
         case zouglou = 1992
         case maskandi = 2000
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .african: return "African"
                 case .afrikaans: return "Afrikaans"
@@ -1570,7 +1570,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Turkish: Int, CaseIterable {
+    public enum Turkish: Int, CaseIterable {
         case turkish = 1730
         case arabesque = 1709
         case halk = 1700
@@ -1579,7 +1579,7 @@ enum MusicVideos: CaseIterable {
         case fantezi = 1994
         case religious = 1995
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .turkish: return "Turkish"
                 case .arabesque: return "Arabesque"
@@ -1592,7 +1592,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Russian: Int, CaseIterable {
+    public enum Russian: Int, CaseIterable {
         case russian = 1729
         case russianChanson = 1698
         case russianRomance = 2001
@@ -1601,7 +1601,7 @@ enum MusicVideos: CaseIterable {
         case russianRock = 2004
         case russianHipHop = 2005
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .russian: return "Russian"
                 case .russianChanson: return "Russian Chanson"
@@ -1614,7 +1614,7 @@ enum MusicVideos: CaseIterable {
         }
     }
 
-    enum Cuban: Int, CaseIterable {
+    public enum Cuban: Int, CaseIterable {
         case cuban = 1951
         case mambo = 1952
         case chachacha = 1953
@@ -1624,7 +1624,7 @@ enum MusicVideos: CaseIterable {
         case guaracha = 1957
         case timba = 1958
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .cuban: return "Cuban"
                 case .mambo: return "Mambo"
@@ -1638,13 +1638,13 @@ enum MusicVideos: CaseIterable {
         }
     }
     
-    enum Tarab: Int, CaseIterable {
+    public enum Tarab: Int, CaseIterable {
         case tarab = 2011
         case iraqiTarab = 2012
         case egyptianTarab = 2013
         case khaleejiTarab = 2014
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .tarab: return "Tarab"
                 case .iraqiTarab: return "Iraqi Tarab"

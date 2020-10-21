@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum Books: CaseIterable {
+public enum Books: CaseIterable {
     case books
     case parenting
     case militaryAndWarfare
@@ -37,7 +37,7 @@ enum Books: CaseIterable {
     case kids(Kids)
     case youngAdult(YoungAdult)
     
-    static var allCases: [Books] {
+    public static var allCases: [Books] {
         var array: [Books] = [.books, .parenting, .militaryAndWarfare]
         array.append(contentsOf: Nonfiction.allCases.map({ Books.nonfiction($0)}))
         array.append(contentsOf: Romance.allCases.map({Books.romance($0)}))
@@ -68,7 +68,7 @@ enum Books: CaseIterable {
         return array
     }
     
-    var identifier: Int {
+    public var identifier: Int {
         switch self {
             case .books: return 38
             case .parenting: return 9030
@@ -102,7 +102,7 @@ enum Books: CaseIterable {
         }
     }
     
-    var stringValue: String {
+    public var stringValue: String {
         switch self {
             case .books: return "Books"
             case .parenting: return "Parenting"
@@ -240,7 +240,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum Nonfiction: CaseIterable {
+    public enum Nonfiction: CaseIterable {
         case nonfiction
         case transportation
         case trueCrime
@@ -248,7 +248,7 @@ enum Books: CaseIterable {
         case philosophy(Philosophy)
         case socialScience(SocialScience)
         
-        static var allCases: [Nonfiction] {
+        public static var allCases: [Nonfiction] {
             var array: [Nonfiction] = [.nonfiction, .transportation, .trueCrime]
             array.append(contentsOf: FamilyAndRelationships.allCases.map({Nonfiction.familyAndRelationships($0)}))
             array.append(contentsOf: Philosophy.allCases.map({Nonfiction.philosophy($0)}))
@@ -256,7 +256,7 @@ enum Books: CaseIterable {
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .nonfiction: return 9002
                 case .transportation: return 10138
@@ -267,7 +267,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .nonfiction:return "Nonfiction"
                 case .transportation:return "Transportation"
@@ -290,12 +290,12 @@ enum Books: CaseIterable {
             }
         }
         
-        enum FamilyAndRelationships: Int, CaseIterable {
+        public enum FamilyAndRelationships: Int, CaseIterable {
             case familyAndRelationships = 10038
             case FamilyAndChildcare = 11273
             case LoveAndRomance = 11274
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .familyAndRelationships:return "Family & Relationships"
                     case .FamilyAndChildcare:return "Family & Relationships|Family & Childcare"
@@ -304,7 +304,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Philosophy: Int, CaseIterable {
+        public enum Philosophy: Int, CaseIterable {
             case philosophy = 10091
             case aesthetics = 11077
             case epistemology = 11078
@@ -318,7 +318,7 @@ enum Books: CaseIterable {
             case philosophyOfLanguage = 11319
             case philosophyOfReligion = 11320
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .philosophy:return "Philosophy"
                     case .aesthetics:return "Aesthetics"
@@ -336,7 +336,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum SocialScience: Int, CaseIterable {
+        public enum SocialScience: Int, CaseIterable {
             case socialScience = 10120
             case anthropology = 11070
             case archaeology = 11071
@@ -347,7 +347,7 @@ enum Books: CaseIterable {
             case society = 11076
             case sociology = 11327
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .socialScience:return "Social Science"
                     case .anthropology:return "Anthropology"
@@ -363,7 +363,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum Romance: Int, CaseIterable {
+    public enum Romance: Int, CaseIterable {
         case romance = 9003
         case eroticRomance = 10056
         case contemporary = 10057
@@ -381,7 +381,7 @@ enum Books: CaseIterable {
         case military = 11233
         case multicultural = 50000091
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .romance:return "Romance"
                 case .eroticRomance:return "Erotic Romance"
@@ -403,7 +403,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum TravelAndAdventure: Int, CaseIterable {
+    public enum TravelAndAdventure: Int, CaseIterable {
         case travelAndAdventure = 9004
         case africa = 10139
         case asia = 10140
@@ -416,7 +416,7 @@ enum Books: CaseIterable {
         case middleEast = 10147
         case unitedStates = 10148
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .travelAndAdventure:return "Travel & Adventure"
                 case .africa:return "Africa"
@@ -433,7 +433,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum ArtsAndEntertainment: CaseIterable {
+    public enum ArtsAndEntertainment: CaseIterable {
         case artsAndEntertainment
         case theater
         case games
@@ -452,13 +452,13 @@ enum Books: CaseIterable {
         case design
         case artAndArchitecture(ArtAndArchitecture)
         
-        static var allCases: [ArtsAndEntertainment] {
+        public static var allCases: [ArtsAndEntertainment] {
             var array: [ArtsAndEntertainment] = [.artsAndEntertainment, .theater, .games, .music, .performingArts, .photography, .dance, .fashion, .film, .interiorDesign, .mediaArts, .radio, .tv, .visualArts, .artHistory, .design]
             array.append(contentsOf: ArtAndArchitecture.allCases.map({ArtsAndEntertainment.artAndArchitecture($0)}))
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .artsAndEntertainment: return 9007
                 case .theater: return 10036
@@ -480,7 +480,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .artsAndEntertainment:return "Arts & Entertainment"
                 case .theater:return "Theater"
@@ -506,11 +506,11 @@ enum Books: CaseIterable {
             }
         }
         
-        enum ArtAndArchitecture: Int, CaseIterable {
+        public enum ArtAndArchitecture: Int, CaseIterable {
             case artAndArchitecture = 10002
             case urbanPlanning = 11018
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .artAndArchitecture:return "Art & Architecture"
                     case .urbanPlanning:return "Urban Planning"
@@ -519,7 +519,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum BiographiesAndMemoirs: Int, CaseIterable {
+    public enum BiographiesAndMemoirs: Int, CaseIterable {
         case biographiesAndMemoirs = 9008
         case artsAndEntertainment = 11027
         case business = 11028
@@ -535,7 +535,7 @@ enum Books: CaseIterable {
         case sports = 11038
         case women = 11039
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .biographiesAndMemoirs:return "Biographies & Memoirs"
                 case .artsAndEntertainment:return "Arts & Entertainment"
@@ -555,7 +555,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum BusinessAndPersonalFinance: Int, CaseIterable {
+    public enum BusinessAndPersonalFinance: Int, CaseIterable {
         case businessAndPersonalFinance = 9009
         case industriesAndProfessions = 10005
         case marketingAndSales = 10006
@@ -571,7 +571,7 @@ enum Books: CaseIterable {
         case hospitality = 11244
         case realEstate = 11245
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .businessAndPersonalFinance:return "Business & Personal Finance"
                 case .industriesAndProfessions:return "Industries & Professions"
@@ -591,12 +591,12 @@ enum Books: CaseIterable {
         }
     }
     
-    enum ChildrenAndTeens: Int, CaseIterable {
+    public enum ChildrenAndTeens: Int, CaseIterable {
         case childrenAndTeens = 9010
         case childrensFiction = 10081
         case childrensNonfiction = 10082
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .childrenAndTeens:return "Children & Teens"
                 case .childrensFiction:return "Children's Fiction"
@@ -605,11 +605,11 @@ enum Books: CaseIterable {
         }
     }
     
-    enum Humor: Int, CaseIterable {
+    public enum Humor: Int, CaseIterable {
         case humor = 9012
         case jokesAndRiddles = 11246
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .humor:return "Humor"
                 case .jokesAndRiddles:return "Jokes & Riddles"
@@ -617,7 +617,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum History: Int, CaseIterable {
+    public enum History: Int, CaseIterable {
         case history = 9015
         case africa = 10070
         case americas = 10071
@@ -631,7 +631,7 @@ enum Books: CaseIterable {
         case unitedStates = 10079
         case world = 10080
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .history:return "History"
                 case .africa:return "Africa"
@@ -649,7 +649,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum ReligionAndSpirituality: Int, CaseIterable {
+    public enum ReligionAndSpirituality: Int, CaseIterable {
         case religionAndSpirituality = 9018
         case bibles = 10003
         case bibleStudies = 10105
@@ -660,7 +660,7 @@ enum Books: CaseIterable {
         case judaism = 10110
         case comparativeReligion = 11247
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .religionAndSpirituality:return "Religion & Spirituality"
                 case .bibles:return "Bibles"
@@ -675,7 +675,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum ScienceAndNature: CaseIterable {
+    public enum ScienceAndNature: CaseIterable {
         case scienceAndNature
         case nature
         case astronomy
@@ -695,13 +695,13 @@ enum Books: CaseIterable {
         case geology
         case mathematics(Mathematics)
         
-        static var allCases: [ScienceAndNature] {
+        public static var allCases: [ScienceAndNature] {
             var array: [ScienceAndNature] = [.scienceAndNature, .nature, .astronomy, .chemistry, .earthSciences, .essays, .history, .lifeSciences, .physics, .reference, .agriculture, .atmosphere, .biology, .ecology, .environment, .geography, .geology]
             array.append(contentsOf: Mathematics.allCases.map({ScienceAndNature.mathematics($0)}))
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .scienceAndNature: return 9019
                 case .nature: return 10088
@@ -724,7 +724,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .scienceAndNature:return "Science & Nature"
                 case .nature:return "Nature"
@@ -751,7 +751,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Mathematics: Int, CaseIterable {
+        public enum Mathematics: Int, CaseIterable {
             case mathematics = 10085
             case advancedMathematics = 11295
             case algebra = 11296
@@ -760,7 +760,7 @@ enum Books: CaseIterable {
             case geometry = 11299
             case statistics = 11300
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .mathematics:return "Mathematics"
                     case .advancedMathematics:return "Advanced Mathematics"
@@ -774,20 +774,20 @@ enum Books: CaseIterable {
         }
     }
     
-    enum SciFiAndFantasy: CaseIterable {
+    public enum SciFiAndFantasy: CaseIterable {
         case sciFiAndFantasy
         case scienceFiction
         case fantasy(Fantasy)
         case scienceFictionAndLiterature(ScienceFictionAndLiterature)
         
-        static var allCases: [SciFiAndFantasy] {
+        public static var allCases: [SciFiAndFantasy] {
             var array: [SciFiAndFantasy] = [.sciFiAndFantasy, .scienceFiction]
             array.append(contentsOf: Fantasy.allCases.map({SciFiAndFantasy.fantasy($0)}))
             array.append(contentsOf: ScienceFictionAndLiterature.allCases.map({SciFiAndFantasy.scienceFictionAndLiterature($0)}))
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .sciFiAndFantasy: return 9020
                 case .scienceFiction: return 10063
@@ -796,7 +796,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .sciFiAndFantasy:return "Sci-Fi & Fantasy"
                 case .scienceFiction:return "Science Fiction"
@@ -813,7 +813,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Fantasy: Int, CaseIterable {
+        public enum Fantasy: Int, CaseIterable {
             case fantasy = 10044
             case contemporary = 11001
             case epic = 11002
@@ -822,7 +822,7 @@ enum Books: CaseIterable {
             case shortStories = 11005
             case urban = 11275
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .fantasy:return "Fantasy"
                     case .contemporary:return "Contemporary"
@@ -835,13 +835,13 @@ enum Books: CaseIterable {
             }
         }
         
-        enum ScienceFictionAndLiterature: Int, CaseIterable {
+        public enum ScienceFictionAndLiterature: Int, CaseIterable {
             case scienceFictionAndLiterature = 10064
             case adventure = 11006
             case highTech = 11007
             case shortStories = 11008
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .scienceFictionAndLiterature:return "Science Fiction & Literature"
                     case .adventure:return "Adventure"
@@ -852,14 +852,14 @@ enum Books: CaseIterable {
         }
     }
     
-    enum LifestyleAndHome: Int, CaseIterable {
+    public enum LifestyleAndHome: Int, CaseIterable {
         case lifestyleAndHome = 9024
         case antiquesAndCollectibles = 10001
         case craftsAndHobbies = 10034
         case gardening = 10068
         case pets = 10090
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .lifestyleAndHome:return "Lifestyle & Home"
                 case .antiquesAndCollectibles:return "Antiques & Collectibles"
@@ -870,7 +870,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum SelfDevelopment: Int, CaseIterable {
+    public enum SelfDevelopment: Int, CaseIterable {
         case selfDevelopment = 9025
         case spirituality = 10004
         case healthAndFitness = 10069
@@ -878,7 +878,7 @@ enum Books: CaseIterable {
         case selfImprovement = 10119
         case dietAndNutrition = 11062
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .selfDevelopment:return "Self-Development"
                 case .spirituality:return "Spirituality"
@@ -890,19 +890,19 @@ enum Books: CaseIterable {
         }
     }
     
-    enum ComicsAndGraphicNovels: CaseIterable {
+    public enum ComicsAndGraphicNovels: CaseIterable {
         case comicsAndGraphicNovels
         case graphicNovels
         case comics
         case manga(Manga)
         
-        static var allCases: [ComicsAndGraphicNovels] {
+        public static var allCases: [ComicsAndGraphicNovels] {
             var array: [ComicsAndGraphicNovels] = [.comicsAndGraphicNovels, .graphicNovels, .comics]
             array.append(contentsOf: Manga.allCases.map({ComicsAndGraphicNovels.manga($0)}))
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .comicsAndGraphicNovels: return 9026
                 case .graphicNovels: return 10015
@@ -911,7 +911,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .comicsAndGraphicNovels:return "Comics & Graphic Novels"
                 case .graphicNovels:return "Graphic Novels"
@@ -924,7 +924,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Manga: Int, CaseIterable {
+        public enum Manga: Int, CaseIterable {
             case manga = 10016
             case schoolDrama = 11051
             case humanDrama = 11052
@@ -955,7 +955,7 @@ enum Books: CaseIterable {
             case sports = 50000087
             case horror = 50000089
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .manga:return "Manga"
                     case .schoolDrama:return "School Drama"
@@ -991,7 +991,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum ComputersAndInternet: Int, CaseIterable {
+    public enum ComputersAndInternet: Int, CaseIterable {
         case computersAndInternet = 9027
         case computers = 10017
         case databases = 10018
@@ -1003,7 +1003,7 @@ enum Books: CaseIterable {
         case software = 10024
         case systemAdministration = 10025
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .computersAndInternet:return "Computers & Internet"
                 case .computers:return "Computers"
@@ -1019,7 +1019,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum CookbooksFoodAndWine: Int, CaseIterable {
+    public enum CookbooksFoodAndWine: Int, CaseIterable {
         case cookbooksFoodAndWine = 9028
         case beverages = 10026
         case coursesAndDishes = 10027
@@ -1031,7 +1031,7 @@ enum Books: CaseIterable {
         case specificIngredients = 10033
         case culinaryArts = 11255
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .cookbooksFoodAndWine:return "Cookbooks, Food & Wine"
                 case .beverages:return "Beverages"
@@ -1047,7 +1047,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum ProfessionalAndTechnical: CaseIterable {
+    public enum ProfessionalAndTechnical: CaseIterable {
         case professionalAndTechnical
         case design
         case law
@@ -1055,7 +1055,7 @@ enum Books: CaseIterable {
         case medical(Medical)
         case engineering(Engineering)
         
-        static var allCases: [ProfessionalAndTechnical] {
+        public static var allCases: [ProfessionalAndTechnical] {
             var array: [ProfessionalAndTechnical] = [.professionalAndTechnical, .design, .law]
             array.append(contentsOf: Education.allCases.map({ProfessionalAndTechnical.education($0)}))
             array.append(contentsOf: Medical.allCases.map({ProfessionalAndTechnical.medical($0)}))
@@ -1063,7 +1063,7 @@ enum Books: CaseIterable {
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .professionalAndTechnical: return 9029
                 case .design: return 10035
@@ -1074,7 +1074,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .professionalAndTechnical:return "Professional & Technical"
                 case .design:return "Design"
@@ -1097,11 +1097,11 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Education: Int, CaseIterable {
+        public enum Education: Int, CaseIterable {
             case education = 10037
             case languageArtsAndDisciplines = 11009
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .education:return "Education"
                     case .languageArtsAndDisciplines:return "Language Arts & Disciplines"
@@ -1109,7 +1109,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Medical: Int, CaseIterable {
+        public enum Medical: Int, CaseIterable {
             case medical = 10086
             case veterinary = 11301
             case neuroscience = 11302
@@ -1124,7 +1124,7 @@ enum Books: CaseIterable {
             case radiology = 11311
             case alternativeMedicine = 11312
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .medical:return "Medical"
                     case .veterinary:return "Veterinary"
@@ -1143,7 +1143,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Engineering: Int, CaseIterable {
+        public enum Engineering: Int, CaseIterable {
             case engineering = 10137
             case aeronautics = 11329
             case chemicalAndPetroleumEngineering = 11330
@@ -1154,7 +1154,7 @@ enum Books: CaseIterable {
             case mechanicalEngineering = 11335
             case powerResources = 11336
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .engineering:return "Engineering"
                     case .aeronautics:return "Aeronautics"
@@ -1170,7 +1170,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum FictionAndLiterature: Int, CaseIterable {
+    public enum FictionAndLiterature: Int, CaseIterable {
         case fictionAndLiterature = 9031
         case actionAndAdventure = 10039
         case africanAmerican = 10040
@@ -1193,7 +1193,7 @@ enum Books: CaseIterable {
         case family = 11050
         case lightNovels = 50000088
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .fictionAndLiterature:return "Fiction & Literature"
                 case .actionAndAdventure:return "Action & Adventure"
@@ -1220,7 +1220,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum MysteriesAndThrillers: Int, CaseIterable {
+    public enum MysteriesAndThrillers: Int, CaseIterable {
         case mysteriesAndThrillers = 9032
         case hardBoiled = 10050
         case historical = 10051
@@ -1230,7 +1230,7 @@ enum Books: CaseIterable {
         case womenSleuths = 10055
         case cozy = 11259
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .mysteriesAndThrillers:return "Mysteries & Thrillers"
                 case .hardBoiled:return "Hard-Boiled"
@@ -1244,7 +1244,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum Reference: CaseIterable {
+    public enum Reference: CaseIterable {
         case reference
         case almanacsAndYearbooks
         case atlasesAndMaps
@@ -1260,13 +1260,13 @@ enum Books: CaseIterable {
         case manuals
         case foreignLanguages(ForeignLanguages)
         
-        static var allCases: [Reference] {
+        public static var allCases: [Reference] {
             var array: [Reference] = [.reference, .almanacsAndYearbooks, .atlasesAndMaps, .catalogsAndDirectories, .consumerGuides, .dictionariesAndThesauruses, .encyclopedias, .etiquette, .quotations, .wordsAndLanguage, .writing, .studyAids, .manuals]
             array.append(contentsOf: ForeignLanguages.allCases.map({Reference.foreignLanguages($0)}))
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .reference: return 9033
                 case .almanacsAndYearbooks: return 10095
@@ -1285,7 +1285,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .reference:return "Reference"
                 case .almanacsAndYearbooks:return "Almanacs & Yearbooks"
@@ -1308,7 +1308,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum ForeignLanguages: Int, CaseIterable {
+        public enum ForeignLanguages: Int, CaseIterable {
             case foreignLanguages = 10066
             case arabic = 11276
             case bilingualEditions = 11277
@@ -1330,7 +1330,7 @@ enum Books: CaseIterable {
             case spanish = 11293
             case speechPathology = 11294
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .foreignLanguages:return "Foreign Languages"
                     case .arabic:return "Arabic"
@@ -1357,7 +1357,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum PoliticsAndCurrentEvents: Int, CaseIterable {
+    public enum PoliticsAndCurrentEvents: Int, CaseIterable {
         case politicsAndCurrentEvents = 9034
         case currentEvents = 11260
         case foreignPolicyAndInternationalRelations = 11261
@@ -1367,7 +1367,7 @@ enum Books: CaseIterable {
         case publicAdministration = 11265
         case worldAffairs = 11266
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .politicsAndCurrentEvents:return "Politics & Current Events"
                 case .currentEvents:return "Current Events"
@@ -1381,7 +1381,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum SportsAndOutdoors: Int, CaseIterable {
+    public enum SportsAndOutdoors: Int, CaseIterable {
         case sportsAndOutdoors = 9035
         case baseball = 10121
         case basketball = 10122
@@ -1407,7 +1407,7 @@ enum Books: CaseIterable {
         case rugby = 11060
         case running = 11061
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .sportsAndOutdoors:return "Sports & Outdoors"
                 case .baseball:return "Baseball"
@@ -1437,7 +1437,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum CommunicationsAndMedia: Int, CaseIterable {
+    public enum CommunicationsAndMedia: Int, CaseIterable {
         case communicationsAndMedia = 11010
         case broadcasting = 11011
         case digitalMedia = 11012
@@ -1447,7 +1447,7 @@ enum Books: CaseIterable {
         case speech = 11016
         case writing = 11017
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .communicationsAndMedia:return "Communications & Media"
                 case .broadcasting:return "Broadcasting"
@@ -1461,7 +1461,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum Kids: CaseIterable {
+    public enum Kids: CaseIterable {
         case kids
         case animals
         case biography
@@ -1490,7 +1490,7 @@ enum Books: CaseIterable {
         case humor(Humor)
         case learningToRead(LearningToRead)
         
-        static var allCases: [Kids] {
+        public static var allCases: [Kids] {
             var array: [Kids] = [
                 .kids, .animals, .biography, .careersAndOccupations, .computersAndTechnology, .cookingAndFood, .family, .gamesAndActivities, .generalNonfiction, .health, .history, .poetry, .nurseryRhymes, .government, .reference, .religion, .socialStudies, .socialIssues, .scienceAndNature, .sportsAndRecreation, .transportation]
             array.append(contentsOf: ArtsAndEntertainment.allCases.map({Kids.artsAndEntertainment($0)}))
@@ -1501,7 +1501,7 @@ enum Books: CaseIterable {
             array.append(contentsOf: LearningToRead.allCases.map({Kids.learningToRead($0)}))
             return array
         }
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .kids: return 11086
                 case .animals: return 11087
@@ -1533,7 +1533,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .kids:return "Kids"
                 case .animals:return "Animals"
@@ -1589,7 +1589,7 @@ enum Books: CaseIterable {
             }
         }
 
-        enum BasicConcepts: Int, CaseIterable {
+        public enum BasicConcepts: Int, CaseIterable {
             case basicConcepts = 11088
             case alphabet = 11089
             case body = 11090
@@ -1605,7 +1605,7 @@ enum Books: CaseIterable {
             case sounds = 11100
             case words = 11101
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .basicConcepts:return "Basic Concepts"
                     case .alphabet:return "Alphabet"
@@ -1625,14 +1625,14 @@ enum Books: CaseIterable {
             }
         }
         
-        enum ArtsAndEntertainment: Int, CaseIterable {
+        public enum ArtsAndEntertainment: Int, CaseIterable {
             case artsAndEntertainment = 11106
             case art = 11107
             case crafts = 11108
             case music = 11109
             case performingArts = 11110
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .artsAndEntertainment:return "Arts & Entertainment"
                     case .art:return "Art"
@@ -1643,7 +1643,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Fiction: Int, CaseIterable {
+        public enum Fiction: Int, CaseIterable {
             case fiction = 11112
             case actionAndAdventure = 11113
             case animals = 11114
@@ -1665,7 +1665,7 @@ enum Books: CaseIterable {
             case sportsAndRecreation = 11130
             case transportation = 11131
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .fiction:return "Fiction"
                     case .actionAndAdventure:return "Action & Adventure"
@@ -1691,7 +1691,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum HolidaysAndCelebrations: Int, CaseIterable {
+        public enum HolidaysAndCelebrations: Int, CaseIterable {
             case holidaysAndCelebrations = 11136
             case birthdays = 11137
             case christmasAndAdvent = 11138
@@ -1706,7 +1706,7 @@ enum Books: CaseIterable {
             case thanksgiving = 11147
             case valentinesDay = 11148
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .holidaysAndCelebrations:return "Holidays & Celebrations"
                     case .birthdays:return "Birthdays"
@@ -1725,11 +1725,11 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Humor: Int, CaseIterable {
+        public enum Humor: Int, CaseIterable {
             case humor = 11149
             case jokesAndRiddles = 11150
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .humor:return "Humor"
                     case .jokesAndRiddles:return "Jokes & Riddles"
@@ -1737,13 +1737,13 @@ enum Books: CaseIterable {
             }
         }
         
-        enum LearningToRead: Int, CaseIterable {
+        public enum LearningToRead: Int, CaseIterable {
             case learningtoRead = 11152
             case chapterBooks = 11153
             case earlyReaders = 11154
             case intermediateReaders = 11155
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .learningtoRead:return "Learning to Read"
                     case .chapterBooks:return "Chapter Books"
@@ -1754,7 +1754,7 @@ enum Books: CaseIterable {
         }
     }
     
-    enum YoungAdult: CaseIterable {
+    public enum YoungAdult: CaseIterable {
         case youngAdult
         case animals
         case biography
@@ -1780,7 +1780,7 @@ enum Books: CaseIterable {
         case holidaysAndCelebrations(HolidaysAndCelebrations)
         case humor(Humor)
         
-        static var allCases: [YoungAdult] {
+        public static var allCases: [YoungAdult] {
             var array: [YoungAdult] = [
                 .youngAdult, .animals, .biography, .careersAndOccupations, .computersAndTechnology, .cookingAndFood, .family, .gamesAndActivities, .generalNonfiction, .health, .history, .poetry, .politicsAndGovernment, .reference, .religion, .socialStudies, .scienceAndNature, .comingOfAge, .sportsAndRecreation, .transportation]
             array.append(contentsOf: ArtsAndEntertainment.allCases.map({YoungAdult.artsAndEntertainment($0)}))
@@ -1790,7 +1790,7 @@ enum Books: CaseIterable {
             return array
         }
         
-        var identifier: Int {
+        public var identifier: Int {
             switch self {
                 case .youngAdult: return 11165
                 case .animals: return 11166
@@ -1819,7 +1819,7 @@ enum Books: CaseIterable {
             }
         }
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .youngAdult:return "Young Adult"
                 case .animals:return "Animals"
@@ -1864,14 +1864,14 @@ enum Books: CaseIterable {
             }
         }
         
-        enum ArtsAndEntertainment: Int, CaseIterable {
+        public enum ArtsAndEntertainment: Int, CaseIterable {
             case artsAndEntertainment = 11171
             case art = 11172
             case crafts = 11173
             case music = 11174
             case performingArts = 11175
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .artsAndEntertainment:return "Arts & Entertainment"
                     case .art:return "Art"
@@ -1882,7 +1882,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Fiction: Int, CaseIterable {
+        public enum Fiction: Int, CaseIterable {
             case fiction = 11177
             case actionAndAdventure = 11178
             case animals = 11179
@@ -1906,7 +1906,7 @@ enum Books: CaseIterable {
             case sportsAndRecreation = 11197
             case transportation = 11198
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .fiction:return "Fiction"
                     case .actionAndAdventure:return "Action & Adventure"
@@ -1934,7 +1934,7 @@ enum Books: CaseIterable {
             }
         }
         
-        enum HolidaysAndCelebrations: Int, CaseIterable {
+        public enum HolidaysAndCelebrations: Int, CaseIterable {
             case holidaysAndCelebrations = 11203
             case birthdays = 11204
             case christmasAndAdvent = 11205
@@ -1949,7 +1949,7 @@ enum Books: CaseIterable {
             case thanksgiving = 11214
             case valentinesDay = 11215
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .holidaysAndCelebrations:return "Holidays & Celebrations"
                     case .birthdays:return "Birthdays"
@@ -1968,11 +1968,11 @@ enum Books: CaseIterable {
             }
         }
         
-        enum Humor: Int, CaseIterable {
+        public enum Humor: Int, CaseIterable {
             case humor = 11216
             case jokesAndRiddles = 11217
             
-            var stringValue: String {
+            public var stringValue: String {
                 switch self {
                     case .humor:return "Humor"
                     case .jokesAndRiddles:return "Jokes & Riddles"

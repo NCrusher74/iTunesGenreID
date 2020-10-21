@@ -4,7 +4,7 @@
 //
 //  Created by Nolaine Crusher on 10/18/20.
 //
-enum AppStore: CaseIterable {
+public enum AppStore: CaseIterable {
     case appStore
     case games(Games)
     case magazinesAndNewspapers(MagazinesAndNewspapers)
@@ -34,7 +34,7 @@ enum AppStore: CaseIterable {
     case developerTools
     case graphicsAndDesign
 
-    static var allCases: [AppStore] {
+    public static var allCases: [AppStore] {
         var array: [AppStore] = [
             .appStore,
             .business,
@@ -68,7 +68,7 @@ enum AppStore: CaseIterable {
         return array
     }
     
-    var identifier: Int {
+    public var identifier: Int {
         switch self {
             case .business: return 6000
             case .weather: return 6001
@@ -101,7 +101,7 @@ enum AppStore: CaseIterable {
         }
     }
     
-    var stringValue: String {
+    public var stringValue: String {
         switch self {
             case .business: return "Business"
             case .weather: return "Weather"
@@ -134,7 +134,7 @@ enum AppStore: CaseIterable {
         }
     }
     
-    enum Games: Int, CaseIterable {
+    public enum Games: Int, CaseIterable {
         case games = 6014
         case action = 7001
         case adventure = 7002
@@ -155,7 +155,7 @@ enum AppStore: CaseIterable {
         case trivia = 7018
         case word = 7019
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .games: return "Games"
                 case .action: return "Action"
@@ -180,7 +180,7 @@ enum AppStore: CaseIterable {
         }
     }
     
-    enum MagazinesAndNewspapers: Int, CaseIterable {
+    public enum MagazinesAndNewspapers: Int, CaseIterable {
         case magazinesAndNewspapers = 6021
         case newsAndPolitics = 13001
         case fashionAndStyle = 13002
@@ -211,7 +211,7 @@ enum AppStore: CaseIterable {
         case travelAndRegional = 13029
         case womensInterest = 13030
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .magazinesAndNewspapers: return "MagazinesAndNewspapers"
                 case .newsAndPolitics: return "NewsAndPolitics"
@@ -246,7 +246,7 @@ enum AppStore: CaseIterable {
         }
     }
     
-    enum Stickers: Int, CaseIterable {
+    public enum Stickers: Int, CaseIterable {
         case stickers = 6025
         case emojiAndExpressions = 16001
         case animalsAndNature = 16003
@@ -264,7 +264,7 @@ enum AppStore: CaseIterable {
         case kidsAndFamily = 16025
         case fashion = 16026
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .stickers: return "Stickers"
                 case .emojiAndExpressions: return "Emoji & Expressions"
@@ -287,8 +287,8 @@ enum AppStore: CaseIterable {
     }
 }
 
-enum MacAppStore: CaseIterable {
-    static var allCases: [MacAppStore] {
+public enum MacAppStore: CaseIterable {
+    static public var allCases: [MacAppStore] {
         var array: [MacAppStore] = [
             .macAppStore,
             .business,
@@ -338,7 +338,7 @@ enum MacAppStore: CaseIterable {
     case weather
     case graphicsAndDesign
 
-    var identifier: Int {
+    public var identifier: Int {
         switch self {
             case .macAppStore: return 39
             case .business: return 12001
@@ -365,7 +365,7 @@ enum MacAppStore: CaseIterable {
         }
     }
     
-    var stringValue: String {
+    public var stringValue: String {
         switch self {
             case .macAppStore: return "Mac App Store"
             case .business: return "Business"
@@ -392,7 +392,7 @@ enum MacAppStore: CaseIterable {
         }
     }
     
-    enum Games: Int, CaseIterable {
+    public enum Games: Int, CaseIterable {
         case games = 12006
         case action = 12201
         case adventure = 12202
@@ -414,7 +414,7 @@ enum MacAppStore: CaseIterable {
         case trivia = 12218
         case word = 12219
         
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
                 case .games: return "Games"
                 case .action: return "Action"

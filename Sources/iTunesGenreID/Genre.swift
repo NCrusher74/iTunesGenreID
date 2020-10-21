@@ -1,4 +1,4 @@
-enum Genre: CaseIterable {
+public enum Genre: CaseIterable {
     case music(Music)
     case musicVideos(MusicVideos)
     case podcasts(Podcasts)
@@ -13,7 +13,7 @@ enum Genre: CaseIterable {
     case audiobooks(Audiobooks)
     case iTunesU(ITunesU)
     
-    static var allCases: [Genre] {
+    public static var allCases: [Genre] {
         var array: [Genre] = [.iPodGames]
         array.append(contentsOf: Music.allCases.map({ Genre.music($0)}))
         array.append(contentsOf: MusicVideos.allCases.map({ Genre.musicVideos($0)}))
@@ -30,7 +30,7 @@ enum Genre: CaseIterable {
         return array
     }
     
-    var identifier: Int? {
+    public var identifier: Int {
         switch self {
             case .podcasts(let subject): return subject.identifier
             case .musicVideos(let genre): return genre.identifier
@@ -48,7 +48,7 @@ enum Genre: CaseIterable {
         }
     }
     
-    var stringValue: String {
+    public var stringValue: String {
         switch self {
             case .music(let genre):
                 switch genre {

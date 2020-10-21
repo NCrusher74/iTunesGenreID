@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum TV: Int, CaseIterable {
+public enum TV: Int, CaseIterable {
     case tvShows = 32
     case comedy = 4000
     case drama = 4001
@@ -21,7 +21,7 @@ enum TV: Int, CaseIterable {
     case teens = 4010
     case latinoTV = 4011
 
-    var stringValue: String {
+    public var stringValue: String {
         switch self {
             case .tvShows: return "TV Shows"
             case .comedy: return "Comedy"
@@ -40,7 +40,7 @@ enum TV: Int, CaseIterable {
     }
 }
 
-enum Movies: Int, CaseIterable {
+public enum Movies: Int, CaseIterable {
     case movies = 33
     case actionAndAdventure = 4401
     case anime = 4402
@@ -77,7 +77,7 @@ enum Movies: Int, CaseIterable {
     case middleEastern = 4433
     case african = 4434
 
-    var stringValue: String {
+    public var stringValue: String {
         switch self {
             case .movies: return "Movies"
             case .actionAndAdventure: return "Action & Adventure"

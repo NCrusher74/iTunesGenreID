@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum Audiobooks: Int, CaseIterable {
+public enum Audiobooks: Int, CaseIterable {
     case audiobooks = 50000024
     case news = 74
     case programsAndPerformances = 75
@@ -35,7 +35,7 @@ enum Audiobooks: Int, CaseIterable {
     case erotica = 50000092
     case lightNovels = 50000093
 
-    var stringValue: String {
+    public public var stringValue: String {
         switch self {
             case .audiobooks: return "Audiobooks"
             case .news: return "News"
