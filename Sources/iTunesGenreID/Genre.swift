@@ -13,6 +13,33 @@ public enum Genre: CaseIterable {
     case audiobooks(Audiobooks)
     case iTunesU(ITunesU)
     
+    public init?(identifier: Int) {
+        var mapping = [Int: Genre]()
+        for app in Genre.allCases {
+            let int = app.identifier
+            mapping[int] = app
+        }
+        
+        if let mapped = mapping[identifier] {
+            self = mapped
+        } else {
+            return nil
+        }
+    }
+    
+    public init?(stringValue: String) {
+        var mapping = [String: Genre]()
+        for app in Genre.allCases {
+            let string = app.stringValue
+            mapping[string] = app
+        }
+        if let mapped = mapping[stringValue] {
+            self = mapped
+        } else {
+            return nil
+        }
+    }
+
     public static var allCases: [Genre] {
         var array: [Genre] = [.iPodGames]
         array.append(contentsOf: Music.allCases.map({ Genre.music($0)}))
