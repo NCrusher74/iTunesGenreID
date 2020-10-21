@@ -15,7 +15,7 @@ enum Books: CaseIterable {
     case travelAndAdventure(TravelAndAdventure)
     case artsAndEntertainment(ArtsAndEntertainment)
     case biographiesAndMemoirs(BiographiesAndMemoirs)
-    case businessAndPersonalFinancie(BusinessAndPersonalFinance)
+    case businessAndPersonalFinance(BusinessAndPersonalFinance)
     case childrenAndTeens(ChildrenAndTeens)
     case humor(Humor)
     case history(History)
@@ -37,6 +37,37 @@ enum Books: CaseIterable {
     case kids(Kids)
     case youngAdult(YoungAdult)
     
+    static var allCases: [Books] {
+        var array: [Books] = [.books, .parenting, .militaryAndWarfare]
+        array.append(contentsOf: Nonfiction.allCases.map({ Books.nonfiction($0)}))
+        array.append(contentsOf: Romance.allCases.map({Books.romance($0)}))
+        array.append(contentsOf: TravelAndAdventure.allCases.map({Books.travelAndAdventure($0)}))
+        array.append(contentsOf: ArtsAndEntertainment.allCases.map({Books.artsAndEntertainment($0)}))
+        array.append(contentsOf: BiographiesAndMemoirs.allCases.map({Books.biographiesAndMemoirs($0)}))
+        array.append(contentsOf: BusinessAndPersonalFinance.allCases.map({Books.businessAndPersonalFinance($0)}))
+        array.append(contentsOf: ChildrenAndTeens.allCases.map({Books.childrenAndTeens($0)}))
+        array.append(contentsOf: Humor.allCases.map({Books.humor($0)}))
+        array.append(contentsOf: History.allCases.map({Books.history($0)}))
+        array.append(contentsOf: ReligionAndSpirituality.allCases.map({Books.religionAndSpirituality($0)}))
+        array.append(contentsOf: ScienceAndNature.allCases.map({Books.scienceAndNature($0)}))
+        array.append(contentsOf: SciFiAndFantasy.allCases.map({Books.sciFiAndFantasy($0)}))
+        array.append(contentsOf: LifestyleAndHome.allCases.map({Books.lifestyleAndHome($0)}))
+        array.append(contentsOf: SelfDevelopment.allCases.map({Books.selfDevelopment($0)}))
+        array.append(contentsOf: ComicsAndGraphicNovels.allCases.map({Books.comicsAndGraphicNovels($0)}))
+        array.append(contentsOf: ComputersAndInternet.allCases.map({Books.computersAndInternet($0)}))
+        array.append(contentsOf: CookbooksFoodAndWine.allCases.map({Books.cookbooksFoodAndWine($0)}))
+        array.append(contentsOf: ProfessionalAndTechnical.allCases.map({Books.professsionalAndTechnical($0)}))
+        array.append(contentsOf: FictionAndLiterature.allCases.map({Books.fictionAndLiterature($0)}))
+        array.append(contentsOf: MysteriesAndThrillers.allCases.map({Books.mysteriesAndThrillers($0)}))
+        array.append(contentsOf: Reference.allCases.map({Books.reference($0)}))
+        array.append(contentsOf: PoliticsAndCurrentEvents.allCases.map({Books.politicsAndCurrentEvents($0)}))
+        array.append(contentsOf: SportsAndOutdoors.allCases.map({Books.sportsAndOutdoors($0)}))
+        array.append(contentsOf: CommunicationsAndMedia.allCases.map({Books.communicationsAndMedia($0)}))
+        array.append(contentsOf: Kids.allCases.map({Books.kids($0)}))
+        array.append(contentsOf: YoungAdult.allCases.map({Books.youngAdult($0)}))
+        return array
+    }
+    
     var identifier: Int {
         switch self {
             case .books: return 38
@@ -47,7 +78,7 @@ enum Books: CaseIterable {
             case .travelAndAdventure(let genre): return genre.rawValue
             case .artsAndEntertainment(let genre): return genre.identifier
             case .biographiesAndMemoirs(let genre): return genre.rawValue
-            case .businessAndPersonalFinancie(let genre): return genre.rawValue
+            case .businessAndPersonalFinance(let genre): return genre.rawValue
             case .childrenAndTeens(let genre): return genre.rawValue
             case .humor(let genre): return genre.rawValue
             case .history(let genre): return genre.rawValue
@@ -101,7 +132,7 @@ enum Books: CaseIterable {
                     case .biographiesAndMemoirs: return genre.stringValue
                     default: return "\(BiographiesAndMemoirs.biographiesAndMemoirs.stringValue)|\(genre.stringValue)"
                 }
-            case .businessAndPersonalFinancie(let genre):
+            case .businessAndPersonalFinance(let genre):
                 switch genre {
                     case .businessAndPersonalFinance: return genre.stringValue
                     default: return "\(BusinessAndPersonalFinance.businessAndPersonalFinance.stringValue)|\(genre.stringValue)"
