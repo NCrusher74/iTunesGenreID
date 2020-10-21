@@ -25,7 +25,7 @@ public enum ITunesU: CaseIterable {
     case society(Society)
     case teachingAndLearning(TeachingAndLearning)
     
-    static var allCases: [ITunesU] {
+    public static var allCases: [ITunesU] {
         var array: [ITunesU] = [.iTunesU]
         array.append(contentsOf: BusinessAndEconomics.allCases.map({ITunesU.businessAndEconomics($0)}))
         array.append(contentsOf: Engineering.allCases.map({ITunesU.engineering($0)}))

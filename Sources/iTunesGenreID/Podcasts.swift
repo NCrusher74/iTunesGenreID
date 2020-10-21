@@ -34,7 +34,7 @@ public enum Podcasts: CaseIterable {
     case science(Science)
     case sports(Sports)
     
-    static var allCases: [Podcasts] {
+    public static var allCases: [Podcasts] {
         var array: [Podcasts] = [.podcasts, .newsAndPolitics, .history, .trueCrime, .government]
         array.append(contentsOf: Arts.allCases.map({Podcasts.arts($0)}))
         array.append(contentsOf: Comedy.allCases.map({Podcasts.comedy($0)}))

@@ -11,7 +11,7 @@ public enum Tones: CaseIterable {
     case alertTones(AlertTones)
     case ringtones(Ringtones)
     
-    static var allCases: [Tones] {
+    public static var allCases: [Tones] {
         var array: [Tones] = [.tones]
         array.append(contentsOf: AlertTones.allCases.map({Tones.alertTones($0)}))
         array.append(contentsOf: Ringtones.allCases.map({Tones.ringtones($0)}))
@@ -105,7 +105,7 @@ public enum Tones: CaseIterable {
         case cuban(Cuban)
         case tarab(Tarab)
         
-        static var allCases: [Ringtones] {
+        public static var allCases: [Ringtones] {
             var array: [Ringtones] = [
                 .ringtones,
                 .enka,
@@ -718,7 +718,7 @@ public enum Tones: CaseIterable {
             case thanksgiving
             case christmas(Christmas)
             
-            static var allCases: [Holiday] {
+            public static var allCases: [Holiday] {
                 var array: [Holiday] = [.holiday,
                                         .chanukah,
                                         .easter,
@@ -1176,7 +1176,7 @@ public enum Tones: CaseIterable {
             case khaleeji(Khaleeji)
             case levant(Levant)
             
-            static var allCases: [Arabic] {
+            public static var allCases: [Arabic] {
                 var array: [Arabic] = [.arabic,
                                        .arabicPop,
                                        .islamic,
@@ -1387,7 +1387,7 @@ public enum Tones: CaseIterable {
             case regionalBengali(RegionalBengali)
             case indianClassical(IndianClassical)
             
-            static var allCases: [Indian] {
+            public static var allCases: [Indian] {
                 var array: [Indian] = [
                     .indian,
                     .bollywood,

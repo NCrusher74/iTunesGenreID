@@ -42,7 +42,7 @@ public enum Textbooks: CaseIterable {
     case teachingAndLearning(TeachingAndLearning)
     case travelAndAdventure(TravelAndAdventure)
     
-    static var allCases: [Textbooks] {
+    public static var allCases: [Textbooks] {
         var array: [Textbooks] = [.textbooks, .biographiesAndMemoirs, .humor, .parenting]
         array.append(contentsOf: ArtsAndEntertainment.allCases.map({Textbooks.artsAndEntertainment($0)}))
         array.append(contentsOf: BusinessAndPersonalFinance.allCases.map({Textbooks.businessAndPersonalFinance($0)}))
@@ -292,7 +292,7 @@ public enum Textbooks: CaseIterable {
         case visualArts
         case artAndArchitecture(ArtAndArchitecture)
         
-        static var allCases: [ArtsAndEntertainment] {
+        public static var allCases: [ArtsAndEntertainment] {
             var array: [ArtsAndEntertainment] = [.artsAndEntertainment, .artHistory, .dance, .fashion, .film, .games, .interiorDesign, .mediaArts, .music, .photography, .photography, .theater, .tv, .visualArts]
             array.append(contentsOf: ArtAndArchitecture.allCases.map({ArtsAndEntertainment.artAndArchitecture($0)}))
             return array
@@ -597,7 +597,7 @@ public enum Textbooks: CaseIterable {
         case world
         case americas(Americas)
         
-        static var allCases: [History] {
+        public static var allCases: [History] {
             var array: [History] = [.history, .africa, .ancient, .asia, .australiaAndOceania, .europe, .middleEast, .military, .world]
             array.append(contentsOf: Americas.allCases.map({History.americas($0)}))
             return array
@@ -978,7 +978,7 @@ public enum Textbooks: CaseIterable {
         case fantasy(Fantasy)
         case scienceFictionAndLiterature(ScienceFictionAndLiterature)
         
-        static var allCases: [SciFiAndFantasy] {
+        public static var allCases: [SciFiAndFantasy] {
             var array: [SciFiAndFantasy] = [.sciFiAndFantasy, .scienceFiction]
             array.append(contentsOf: Fantasy.allCases.map({SciFiAndFantasy.fantasy($0)}))
             array.append(contentsOf: ScienceFictionAndLiterature.allCases.map({SciFiAndFantasy.scienceFictionAndLiterature($0)}))
@@ -1232,7 +1232,7 @@ public enum Textbooks: CaseIterable {
         case specialtyTravel
         case americas(Americas)
         
-        static var allCases: [TravelAndAdventure] {
+        public static var allCases: [TravelAndAdventure] {
             var array: [TravelAndAdventure] = [.travelAndAdventure, .africa, .asia, .caribbean, .essaysAndMemoirs, .europe, .middleEast, .oceania, .specialtyTravel]
             array.append(contentsOf: Americas.allCases.map({TravelAndAdventure.americas($0)}))
             return array

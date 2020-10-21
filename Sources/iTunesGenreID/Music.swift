@@ -588,7 +588,7 @@ public enum Music {
         case thanksgiving
         case christmas(Christmas)
         
-        static var allCases: [Holiday] {
+        public static var allCases: [Holiday] {
             var array: [Holiday] = [.holiday,
                                     .chanukah,
                                     .easter,
@@ -1301,7 +1301,7 @@ public enum Music {
         case khaleeji(Khaleeji)
         case levant(Levant)
 
-        static var allCases: [Arabic] {
+        public static var allCases: [Arabic] {
             var array: [Arabic] = [.arabic,
                                    .arabicPop,
                                    .islamic,
@@ -1426,7 +1426,7 @@ public enum Music {
         case regionalIndian(RegionalIndian)
         case indianClassical(IndianClassical)
         
-        static var allCases: [Indian] {
+        public static var allCases: [Indian] {
             var array: [Indian] = [
                 .indian,
                 .bollywood,
@@ -1493,7 +1493,7 @@ public enum Music {
             case punjabi(Punjabi)
             case bengali(Bengali)
 
-            static var allCases: [RegionalIndian] {
+            public static var allCases: [RegionalIndian] {
                 var array: [RegionalIndian] = [
                     .regionalIndian,
                     .tamil,
