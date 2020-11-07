@@ -27,7 +27,7 @@ public enum Books: CaseIterable {
     case comicsAndGraphicNovels(ComicsAndGraphicNovels)
     case computersAndInternet(ComputersAndInternet)
     case cookbooksFoodAndWine(CookbooksFoodAndWine)
-    case professsionalAndTechnical(ProfessionalAndTechnical)
+    case professionalAndTechnical(ProfessionalAndTechnical)
     case fictionAndLiterature(FictionAndLiterature)
     case mysteriesAndThrillers(MysteriesAndThrillers)
     case reference(Reference)
@@ -56,7 +56,7 @@ public enum Books: CaseIterable {
         array.append(contentsOf: ComicsAndGraphicNovels.allCases.map({Books.comicsAndGraphicNovels($0)}))
         array.append(contentsOf: ComputersAndInternet.allCases.map({Books.computersAndInternet($0)}))
         array.append(contentsOf: CookbooksFoodAndWine.allCases.map({Books.cookbooksFoodAndWine($0)}))
-        array.append(contentsOf: ProfessionalAndTechnical.allCases.map({Books.professsionalAndTechnical($0)}))
+        array.append(contentsOf: ProfessionalAndTechnical.allCases.map({Books.professionalAndTechnical($0)}))
         array.append(contentsOf: FictionAndLiterature.allCases.map({Books.fictionAndLiterature($0)}))
         array.append(contentsOf: MysteriesAndThrillers.allCases.map({Books.mysteriesAndThrillers($0)}))
         array.append(contentsOf: Reference.allCases.map({Books.reference($0)}))
@@ -90,7 +90,7 @@ public enum Books: CaseIterable {
             case .comicsAndGraphicNovels(let genre): return genre.identifier
             case .computersAndInternet(let genre): return genre.rawValue
             case .cookbooksFoodAndWine(let genre): return genre.rawValue
-            case .professsionalAndTechnical(let genre): return genre.identifier
+            case .professionalAndTechnical(let genre): return genre.identifier
             case .fictionAndLiterature(let genre): return genre.rawValue
             case .mysteriesAndThrillers(let genre): return genre.rawValue
             case .reference(let genre): return genre.identifier
@@ -192,7 +192,7 @@ public enum Books: CaseIterable {
                     case .cookbooksFoodAndWine: return genre.stringValue
                     default: return "\(CookbooksFoodAndWine.cookbooksFoodAndWine.stringValue)|\(genre.stringValue)"
                 }
-            case .professsionalAndTechnical(let genre):
+            case .professionalAndTechnical(let genre):
                 switch genre {
                     case .professionalAndTechnical: return genre.stringValue
                     default: return "\(ProfessionalAndTechnical.professionalAndTechnical.stringValue)|\(genre.stringValue)"
@@ -292,14 +292,14 @@ public enum Books: CaseIterable {
         
         public enum FamilyAndRelationships: Int, CaseIterable {
             case familyAndRelationships = 10038
-            case FamilyAndChildcare = 11273
-            case LoveAndRomance = 11274
+            case familyAndChildcare = 11273
+            case loveAndRomance = 11274
             
             public var stringValue: String {
                 switch self {
                     case .familyAndRelationships:return "Family & Relationships"
-                    case .FamilyAndChildcare:return "Family & Relationships|Family & Childcare"
-                    case .LoveAndRomance:return "Family & Relationships|Love & Romance"
+                    case .familyAndChildcare:return "Family & Relationships|Family & Childcare"
+                    case .loveAndRomance:return "Family & Relationships|Love & Romance"
                 }
             }
         }

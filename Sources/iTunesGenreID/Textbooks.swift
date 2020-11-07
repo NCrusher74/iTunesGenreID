@@ -895,7 +895,7 @@ public enum Textbooks: CaseIterable {
         case dictionariesAndThesauruses = 15195
         case encyclopedias = 15196
         case etiquette = 15197
-        case Quotations = 15198
+        case quotations = 15198
         case studyAids = 15199
         case wordsAndLanguage = 15200
         case writing = 15201
@@ -911,7 +911,7 @@ public enum Textbooks: CaseIterable {
                 case .dictionariesAndThesauruses: return "Dictionaries & Thesauruses"
                 case .encyclopedias: return "Encyclopedias"
                 case .etiquette: return "Etiquette"
-                case .Quotations: return "Quotations"
+                case .quotations: return "Quotations"
                 case .studyAids: return "Study Aids"
                 case .wordsAndLanguage: return "Words & Language"
                 case .writing: return "Writing"
